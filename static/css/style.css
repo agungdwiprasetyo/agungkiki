@@ -18,9 +18,28 @@ body a{
 	text-decoration:none;
 	outline:none;
 }
+/* h1,h2,h3,h4,h5,h6{
+	margin:0;  
+	font-family: 'Tulpen One', cursive !important;
+} */
+.header-home{
+	margin:0;  
+    font-family: 'Tulpen One', cursive !important;
+}
+.font-condensed{
+	margin:0;  
+	font-family: 'Open Sans Condensed', sans-serif !important;
+}
 h1,h2,h3,h4,h5,h6{
 	margin:0;  
-	font-family: 'Tulpen One', cursive;
+	font-family: 'KoHo', sans-serif !important;
+}
+.font-wedding{
+	margin:0;
+	font-family: 'Euphoria Script', cursive !important;
+}
+.header-section{
+    font-size: 3em !important;
 }
 p{
 	margin:0;
@@ -62,14 +81,14 @@ body a:hover,body a:focus{
 	text-decoration: none;
 }
 .agile-logo a img {
-    width: 22%;
+    width: 12%;
     display: inline-block;
     margin-top: -7px;
-	-webkit-animation: fa-spin 5s infinite linear;
+	/* -webkit-animation: fa-spin 5s infinite linear;
     -moz-animation: fa-spin 5s infinite linear;
 	-ms-animation: fa-spin 5s infinite linear;
 	-o-animation: fa-spin 5s infinite linear;
-    animation: fa-spin 5s infinite linear;
+    animation: fa-spin 5s infinite linear; */
 }
 .agile-logo {
     float: left;
@@ -122,6 +141,18 @@ body a:hover,body a:focus{
     border-top: 2px dashed rgba(0, 188, 212, 0.6);
     border-bottom: 2px dashed rgba(0, 188, 212, 0.6);
     padding: .2em 0;
+}
+.agileinfo-main h4 {
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: -30px;
+    width: 50%;
+    text-align: center;
+    color: #fff;
+    /* line-height: 1.4em; */
+    font-size: 2em;
+    /* letter-spacing: 2px; */
+    /* padding: .2em 0; */
 }
 /*-- top-nav --*/ 
 .top-nav {
@@ -266,12 +297,29 @@ span.menu {
 	padding:5em 0;
 }
 h3.agileits-title {
-    font-size: 4em;
+    font-size: 6em;
     letter-spacing: 2px;
-    color: #ff5722;
+    color: #FF5722;
     text-align: center;
     margin-bottom: 0.8em;
     font-weight: 600;
+}
+h4.agileits-title {
+    font-size: 1.7em;
+    letter-spacing: 2px;
+    color: #FF5722;
+    text-align: center;
+    margin-bottom: 0.8em;
+    font-weight: 600;
+}
+.akad {
+    font-size: 1.5em;
+}
+.see-you {
+    margin-top: 30px;
+    font-size: 1em;
+    color: #FF5722 !important;
+	font-family: 'Euphoria Script', cursive !important;
 }
 p {
     font-size: 1em;
@@ -377,7 +425,7 @@ p {
 /*-- //about --*/
 /*-- table-book --*/
 .table-book {
-    background: url(../images/bg1.jpg)no-repeat center 0px fixed;
+    background: url(../images/bg0.jpg)no-repeat center 0px fixed;
 	background-size:cover;
 }
 .book-info {
@@ -443,7 +491,7 @@ p {
 /*-- //services --*/ 
 /*-- team --*/
 .team {
-    background: url(../images/bg1.jpg)no-repeat center 0px fixed;
+    /* background: url(../images/bg0.jpg)no-repeat center 0px fixed; */
     background-size: cover;
 } 
 .team-agileinfo:nth-child(3){
@@ -770,7 +818,7 @@ ul.simplefilter {
 /*-- contact --*/ 
 .contact-info h5 {
     font-size: 2em;
-    color: #00bcd4;
+    color: #e4861a;
     letter-spacing: 2px;
 }
 .contact-info p { 
@@ -814,14 +862,14 @@ ul.simplefilter {
 	display: block;
 }
 .contact-form input[type="submit"] {
-    border: 1px solid #ff5722;
+    border: 1px solid #FF5722;
     outline: none;
     color: #fff;
     padding: .7em 3.9em;
     font-size: 1em;
     margin: 1em 0 0 0;
     -webkit-appearance: none;
-    background: #ff5722;
+    background: #FF5722;
     border-radius: 3px;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -835,13 +883,13 @@ ul.simplefilter {
 }
 .contact-form input[type="submit"]:hover {
   background: none;
-  color: #ff5722;
+  color: #FF5722;
 } 
 .cnt-address p span {
     display: block;
 }
 .cnt-address p a {
-    color: #ff5722;
+    color: #FF5722;
 }
 .cnt-address p a:hover{
     color: #999;
@@ -856,6 +904,7 @@ ul.simplefilter {
 .footer-agile {
     padding: 4em 0 3em;
     background:#191d22; 
+    /* margin-top: 10px; */
 } 
 .agile-logo.footer-w3logo {
     width: 100%;
@@ -888,7 +937,7 @@ ul.simplefilter {
 }    
 .footer-grid h3 {
     font-size: 2.8em;
-    color: #ff5722;
+    color: #FF5722;
     margin-bottom: 0.6em;
     font-weight: 200;
     letter-spacing: 2px;

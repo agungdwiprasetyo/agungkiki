@@ -15,7 +15,11 @@ class HeadComponent extends PureComponent {
                 <link href="static/css/font-awesome.css" rel="stylesheet" /> 
                 <link rel="stylesheet" href="static/css/swipebox.css" /> 
                 <link href="//fonts.googleapis.com/css?family=Tulpen+One" rel="stylesheet" />
+                <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" />
+                <link href="https://fonts.googleapis.com/css?family=KoHo:300" rel="stylesheet" />
+                <link href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;subset=latin-ext" rel="stylesheet" />
                 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css' />
+                <link rel="shortcut icon" href="static/images/iconheader.png" />
             </Head>
         );
     }

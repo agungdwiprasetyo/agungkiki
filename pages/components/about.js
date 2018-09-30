@@ -9,17 +9,36 @@ class AboutComponent extends PureComponent {
         return(
             <div id="about" class="about w3-agile">
                 <div class="container">
+                    <h4 class="agileits-title">You are cordially invited to celebrate the wedding of</h4>
+                </div>
+
+                <div class="container">
                     <div class="about-agileinfo-row">
-                        <div class="col-md-6 col-sm-6 about-w3grids about-w3left">
-                            <h3 class="agileits-title"> About Us</h3> 
-                            <h6>Agung & Kiki </h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer gravida mauris non mi gravida, at sollicitudin odio efficitur. Mauris ex nulla, aliquam ornare facilisis nec convallis pulvinar a non nunc non leo sollicitudin
-                            Mattis tellus eget tellus dictum justo scelerisque interdum mauris rutrum turpis eget tincidunt eleifend vestibulum condimentum mollis tellus eu magna laoreet Itaque earum rerum hic tenetur a sapiente delectus reiciendis maiores alias phasellus mattis tellus eget tellus dictum justo scelerisque interdum</p>
+                        <div class="col-md-2 col-sm-2 about-w3grids about-w3left">
+                            <h3 class="agileits-title"></h3>
                         </div>
-                        <div class="col-md-6 col-sm-6 about-w3grids about-w3limg">
-                            <img src="static/images/wedrings.jpg" class="img-responsive" alt=""/> 
+                        <div class="col-md-8 col-sm-8 about-w3grids about-w3limg">
+                            <h3 class="agileits-title font-wedding">Agung & Kiky</h3>
+                        </div>
+                        <div class="col-md-2 col-sm-2 about-w3grids about-w3right">
+                            <h3 class="agileits-title"></h3>
                         </div>
                         <div class="clearfix"> </div>
+                    </div>
+                </div>
+
+
+                <div class="container">
+                    <div class="contact-info">	
+                        <div class="col-md-12 text-center">
+                            <div class="cnt-address">
+                                <h5>Sunday, December 30, 2018</h5> 
+                                <p class="akad">Akad Nikah: <b>09.00 WIB</b>
+                                    <span>Resepsi: <b>13.00 WIB s.d selesai</b></span>
+                                    Jl. H. Liyas No.77, Paninggilan Utara, Ciledug, Kota Tangerang, Banten 15153
+                                </p> 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div> 
