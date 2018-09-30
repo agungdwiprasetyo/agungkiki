@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import Head from "./components/head";
-import Header from "./components/header";
+import Home from "./components/home";
+import About from "./components/about";
+import Maps from "./components/maps";
 
 class App extends Component {
     constructor(props) {
@@ -11,7 +13,9 @@ class App extends Component {
         return(
             <div>
                 <Head />
-                <Header />
+                <Home />
+                <About />
+                <Maps />
             </div>
         );
     }

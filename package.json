@@ -1,22 +1,22 @@
 {
-  "name": "agungkiki22",
+  "name": "agungkiki",
   "version": "1.0.0",
   "description": "Wedding web homepage",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 8080",
     "build": "next build",
     "start": "next start"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/agungdwiprasetyo/agungkiki22.git"
+    "url": "git+https://github.com/agungdwiprasetyo/agungkiki.git"
   },
   "author": "agung_kiki",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/agungdwiprasetyo/agungkiki22/issues"
+    "url": "https://github.com/agungdwiprasetyo/agungkiki/issues"
   },
-  "homepage": "https://github.com/agungdwiprasetyo/agungkiki22#readme",
+  "homepage": "https://github.com/agungdwiprasetyo/agungkiki#readme",
   "dependencies": {
     "express": "^4.16.3",
     "next": "^7.0.1",
