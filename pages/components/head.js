@@ -12,7 +12,7 @@ class HeadComponent extends PureComponent {
                     SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
                 <link href="https://agungdp.storage.googleapis.com/wedding/static/css/bootstrap.css" type="text/css" rel="stylesheet" media="all" />
                 <link href="https://agungdp.storage.googleapis.com/wedding/static/css/style.css" type="text/css" rel="stylesheet" media="all" />  
-                {/* <link href="https://agungdp.storage.googleapis.com/wedding/static/css/font-awesome.css" rel="stylesheet" />  */}
+                <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /> 
                 <link rel="stylesheet" href="https://agungdp.storage.googleapis.com/wedding/static/css/swipebox.css" /> 
                 <link href="//fonts.googleapis.com/css?family=Tulpen+One" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet" />
