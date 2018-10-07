@@ -58,7 +58,7 @@ body a:hover,body a:focus{
 	background:rgba(0, 0, 0, 0.54);
 } 
 .banner{
-    background: url(../images/1.jpg)no-repeat center; 
+    background: url(https://storage.googleapis.com/agungdp/wedding/static/1.jpg)no-repeat center; 
     background-size: cover;
     position: relative;
 } 
@@ -425,7 +425,7 @@ p {
 /*-- //about --*/
 /*-- table-book --*/
 .table-book {
-    background: url(../images/bg0.jpg)no-repeat center 0px fixed;
+    background: url(https://storage.googleapis.com/agungdp/wedding/static/bg0.jpg)no-repeat center 0px fixed;
 	background-size:cover;
 }
 .book-info {
@@ -491,7 +491,7 @@ p {
 /*-- //services --*/ 
 /*-- team --*/
 .team {
-    /* background: url(../images/bg0.jpg)no-repeat center 0px fixed; */
+    /* background: url(https://storage.googleapis.com/agungdp/wedding/static/bg0.jpg)no-repeat center 0px fixed; */
     background-size: cover;
 } 
 .team-agileinfo:nth-child(3){
@@ -885,6 +885,9 @@ ul.simplefilter {
   background: none;
   color: #FF5722;
 } 
+.cnt-address {
+    font-family: 'KoHo', sans-serif !important;
+}
 .cnt-address p span {
     display: block;
 }
@@ -1045,6 +1048,9 @@ ul.simplefilter {
 .agileinfo-main h3 { 
     font-size: 4em; 
 }
+.agileinfo-main h4 { 
+    font-size: 1.5em; 
+}
 .banner-w3lstext {
     padding: 18em 0;
 }
@@ -1113,7 +1119,10 @@ h3.agileits-title {
     font-size: 3.6em; 
 }
 .agileinfo-main h3 {
-    font-size: 3.5em;
+    font-size: 4.5em;
+}
+.agileinfo-main h4 {
+    font-size: 1.8em;
 }
 .banner-w3lstext {
     padding: 16em 0;
@@ -1223,7 +1232,11 @@ h3.agileits-title {
 }
 @media(max-width:800px){
 .agileinfo-main h3 {
-    font-size: 3em;
+    font-size: 4em;
+    width: 70%;
+}
+.agileinfo-main h4 {
+    font-size: 1.8em;
     width: 70%;
 }
 .top-nav ul li a { 
@@ -1322,7 +1335,10 @@ h3.agileits-title {
 }
 @media(max-width:667px){
 .agileinfo-main h3 {
-    font-size: 2.5em; 
+    font-size: 3.5em; 
+}
+.agileinfo-main h4 {
+    font-size: 1.5em; 
 }
 .top-nav ul {
     width: 90%;
@@ -1370,7 +1386,11 @@ h3.agileits-title {
     padding: .7em 3.5em;
 }
 .agileinfo-main h3 {
-    font-size: 2.2em;
+    font-size: 3em;
+    letter-spacing: 1px;
+}
+.agileinfo-main h4 {
+    font-size: 1.5em;
     letter-spacing: 1px;
 }
 .top-nav ul li { 
@@ -1602,9 +1622,21 @@ h3.agileits-title {
 }
 @media(max-width:414px){
 .agileinfo-main h3 {
-    font-size: 2em;
+    font-size: 2.7em;
     letter-spacing: 0px;
 }
+.agileinfo-main h4 {
+    font-size: 1.2em;
+}
+.header-section {
+    font-size: 1.7em !important;
+}
+.cnt-address {
+    font-size: 0.8em !important;
+}
+/* .font-wedding {
+    font-size: 6.5 !important;
+} */
 .banner-w3lstext {
     padding: 10em 0;
 }
@@ -1741,6 +1773,10 @@ ul.simplefilter {
 }
 .agileinfo-main h3 {
     font-size: 1.7em;
+    letter-spacing: 1px;
+}
+.agileinfo-main h4 {
+    font-size: 1em;
     letter-spacing: 1px;
 }
 .agileinfo-main h3 { 

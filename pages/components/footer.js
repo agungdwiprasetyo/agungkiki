@@ -22,7 +22,7 @@ class FooterComponent extends PureComponent {
                             {/* <h3>Newsletter</h3> */}
                             
                             <div class="copy-w3lsright"> 
-                                <p>© 2018 Agung Dwi Prasetyo . All rights reserved | Build with next.js</p>
+                                <p>© 2018 Agung Dwi Prasetyo . All rights reserved | Build with <a href="https://nextjs.org/" target="_blank">Next.js</a></p>
                             </div> 
                         </div> 
                         <div class="clearfix"> </div>

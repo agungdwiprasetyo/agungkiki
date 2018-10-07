@@ -15,7 +15,7 @@ class MessageComponent extends PureComponent {
                             <h5>Will you join us in celebrating?</h5>
                             <div class="contact-form">  
                                 <form action="javascript:void(0)" method="post">
-                                    <textarea name="Message" placeholder="Message" required="" rows="1"></textarea>
+                                    <textarea name="Message" placeholder="Leave message to us" required="" rows="1"></textarea>
                                     <input type="text" name="First Name" placeholder="Name" required="" />
                                     <input type="email" name="Email" placeholder="Email" required="" /> 
                                     <input type="submit" value="SUBMIT" />
