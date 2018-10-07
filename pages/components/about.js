@@ -33,9 +33,9 @@ class AboutComponent extends PureComponent {
                         <div class="col-md-12 text-center">
                             <div class="cnt-address">
                                 <h5>Sunday, December 30, 2018</h5> 
-                                <p class="akad">Ceremony: <b>09.00 WIB</b>
-                                    <span>Reception: <b>13.00 WIB til finish</b></span>
-                                    Jl. H. Liyas No.77, Paninggilan Utara, Ciledug, Kota Tangerang, Banten 15153
+                                <p class="akad">Ceremony: <b>09.00 a.m</b>
+                                    <span>Reception: <b>01.00 p.m till finish</b></span>
+                                    Jl. H. Liyas II No.77, Paninggilan Utara, Ciledug, Kota Tangerang, Banten 15153
                                 </p> 
                             </div>
                         </div>

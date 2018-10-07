@@ -1520,7 +1520,19 @@ span.menu {
     padding: 2em 0;
 }
 h3.agileits-title {
-    font-size: 2.6em; 
+    font-size: 3.6em !important; 
+}
+h3.header-section {
+    font-size: 2em !important; 
+}
+h4.agileits-title {
+    font-size: 1.5em !important; 
+}
+.contact-info h5 {
+    font-size: 1.5em; 
+}
+.contact-info p {
+    font-size: 1.5em; 
 }
 .callbacks_nav { 
     left: 3%; 
