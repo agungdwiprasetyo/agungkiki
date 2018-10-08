@@ -58,7 +58,7 @@ body a:hover,body a:focus{
 	background:rgba(0, 0, 0, 0.54);
 } 
 .banner{
-    background: url(https://storage.googleapis.com/agungdp/wedding/static/1.jpg)no-repeat center; 
+    background: url("https://storage.googleapis.com/agungdp/wedding/static/1.jpg")no-repeat center; 
     background-size: cover;
     position: relative;
 } 
@@ -816,6 +816,20 @@ ul.simplefilter {
 }
 /*-- //testimonial --*/
 /*-- contact --*/ 
+.attending-option {
+    border: 1px dashed #FF5722;
+    padding: 10px;
+    font-weight: bold;
+    font-family: "KoHo";
+    cursor: pointer;
+}
+
+.attending-option.active {
+    border: transparent;
+    color: white;
+    background-color: #FF5722;
+}
+
 .contact-info h5 {
     font-size: 2em;
     color: #e4861a;
@@ -828,13 +842,14 @@ ul.simplefilter {
     margin-top: 1.5em;
 }  
 .contact-form input[type="text"],.contact-form input[type="email"]{
-    width: 36%;
+    margin-top: 0.8em;
+    width: 100%;
     color: #999;
     background: none;
     outline: none;
     font-size: 1em;
     padding: .7em .8em;
-    margin-right: 1.5em;
+    margin-right: 0;
     border: 1px solid #ccc;
     -webkit-appearance: none;
     border-radius: 3px;
@@ -844,6 +859,7 @@ ul.simplefilter {
     -ms-border-radius: 3px;
 }
 .contact-form textarea {
+    margin-top: 0.8em;
 	resize: none;
 	width: 100%;
 	background: none;
