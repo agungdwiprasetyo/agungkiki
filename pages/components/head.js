@@ -8,10 +8,10 @@ class HeadComponent extends PureComponent {
                 <title>Agung & Kiki Wedding</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-                <meta name="keywords" content="Bouquet Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-                    SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+                <meta name="keywords" content="Agung Kiki Wedding Invitation" />
                 <link href="https://agungdp.storage.googleapis.com/wedding/static/css/bootstrap.css" type="text/css" rel="stylesheet" media="all" />
                 <link href="static/css/style.css" type="text/css" rel="stylesheet" media="all" />  
+                <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.4/sweetalert2.min.css" type="text/css" rel="stylesheet" media="all" />  
                 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /> 
                 <link rel="stylesheet" href="https://agungdp.storage.googleapis.com/wedding/static/css/swipebox.css" /> 
                 <link href="//fonts.googleapis.com/css?family=Tulpen+One" rel="stylesheet" />

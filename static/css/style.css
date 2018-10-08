@@ -901,6 +901,30 @@ ul.simplefilter {
   background: none;
   color: #FF5722;
 } 
+.contact-form button {
+    border: 1px solid #FF5722;
+    outline: none;
+    color: #fff;
+    padding: .7em 1.9em;
+    font-size: 1em;
+    margin: 1em 0 0 0;
+    -webkit-appearance: none;
+    background: #FF5722;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.contact-form button:hover {
+  background: none;
+  color: #FF5722;
+} 
 .cnt-address {
     font-family: 'KoHo', sans-serif !important;
 }

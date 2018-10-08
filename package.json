@@ -26,6 +26,7 @@
     "react-dom": "^16.5.2",
     "responsive-slides": "^1.55.0",
     "smooth-scroll": "^14.2.1",
+    "sweetalert2-react": "^0.7.2",
     "zenscroll": "^4.0.2"
   }
 }

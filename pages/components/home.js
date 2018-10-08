@@ -19,13 +19,13 @@ class HomeComponent extends PureComponent {
     
     render() {
         return(
-            <div id="home" class="banner ">
-                <div class="agileinfo-main">
-                    <div class="slider">
-                        <ul class="rslides" id="slider1">
+            <div id="home" className="banner ">
+                <div className="agileinfo-main">
+                    <div className="slider">
+                        <ul className="rslides" id="slider1">
                             <li> 
-                                <div class="banner-w3lstext">
-                                    <h3 class="font-wedding">We're Getting Married</h3>
+                                <div className="banner-w3lstext">
+                                    <h3 className="font-wedding">We're Getting Married</h3>
                                     <h4>
                                         <div>
                                             “And of His signs is that He created for you, of yourselves, spouses, that you might repose in them, and He has set between you love and mercy. Surely in that are signs for a people who consider” - <b> Ar-Rum: 21</b>
@@ -35,18 +35,18 @@ class HomeComponent extends PureComponent {
                             </li>
                         </ul>
                     </div>	
-                    <div class="agileinfo-header">
-                        <div class="container">
-                            <div class="agile-logo">
+                    <div className="agileinfo-header">
+                        <div className="container">
+                            <div className="agile-logo">
                             </div>
-                            <div class="agileits-w3layouts-icons">
-                                <div class="social-icon w3-agile">
-                                    <a href="https://web.facebook.com/agungdwip22" target="_blank" class="social-button facebook"><i class="fa fa-facebook"></i></a> 
-                                    <a href="https://github.com/agungdwiprasetyo/agungkiki" target="_blank" class="social-button github"><i class="fa fa-github"></i></a> 
-                                    <a href="https://www.instagram.com/agungdp22" target="_blank" class="social-button instagram"><i class="fa fa-instagram"></i></a> 
+                            <div className="agileits-w3layouts-icons">
+                                <div className="social-icon w3-agile">
+                                    <a href="https://web.facebook.com/agungdwip22" target="_blank" className="social-button facebook"><i className="fa fa-facebook"></i></a> 
+                                    <a href="https://github.com/agungdwiprasetyo/agungkiki" target="_blank" className="social-button github"><i className="fa fa-github"></i></a> 
+                                    <a href="https://www.instagram.com/agungdp22" target="_blank" className="social-button instagram"><i className="fa fa-instagram"></i></a> 
                                 </div> 
                             </div>
-                            <div class="clearfix"> </div>
+                            <div className="clearfix"> </div>
                         </div>	    
                     </div>
                 </div>
