@@ -7,7 +7,7 @@ class HeadComponent extends PureComponent {
             <Head>
                 <title>Agung & Kiki Wedding</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+                <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta name="keywords" content="Agung Kiki Wedding Invitation" />
                 <link href="https://agungdp.storage.googleapis.com/wedding/static/css/bootstrap.css" type="text/css" rel="stylesheet" media="all" />
                 <link href="static/css/style.css" type="text/css" rel="stylesheet" media="all" />  

@@ -11,6 +11,7 @@ class MessageComponent extends PureComponent {
             message: "",
             email: "",
             isAttend: null,
+            showAttendAlert: false,
             isLoading: false,
             showAlert: false,
             err: null
@@ -21,6 +22,7 @@ class MessageComponent extends PureComponent {
         this.handleChangeState = this.handleChangeState.bind(this);
         this.submitForm = this.submitForm.bind(this);
         this.getTotalPresent = this.getTotalPresent.bind(this);
+        this.closeAlert = this.closeAlert.bind(this);
 
         this.getTotalPresent();
     }
@@ -39,11 +41,24 @@ class MessageComponent extends PureComponent {
         });
     }
 
+    validateConfirm() {
+        if (this.isAttend == null) {
+            this.state.showAttendAlert = true;
+        }
+    }
+
     submitForm(event) {
         event.preventDefault();
+
+        if (this.state.isAttend == null) {
+            this.setState({ showAttendAlert: true });
+            return false;
+        }
+
         this.handleChangeState("err", null);
         this.handleChangeState("isLoading", true);
-        this.handleChangeState("showAlert", false);
+
+        this.setState({ showAlert: false });
 
         let payload = {
             name: this.state.name,
@@ -54,10 +69,8 @@ class MessageComponent extends PureComponent {
 
         this.api.apiPost("invitation/save", payload).then(response => {
             if (response.success) {
-                this.handleChangeState("showAlert", true);
-                this.getTotalPresent();
+                this.setState({ showAlert: true });
             } else {
-                console.log("masokk")
                 this.handleChangeState("err", response.message);
             }
             this.handleChangeState("isLoading", false);
@@ -67,8 +80,22 @@ class MessageComponent extends PureComponent {
         });
     }
 
+    closeAlert() {
+        this.setState({
+            name: "",
+            message: "",
+            email: "",
+            isAttend: null,
+            showAttendAlert: false,
+            isLoading: false,
+            showAlert: false,
+            err: null
+        });
+        this.getTotalPresent();
+    }
+
     render() {
-        let {
+        const {
             isAttend,
             totalPresent,
             isLoading,
@@ -81,8 +108,15 @@ class MessageComponent extends PureComponent {
                     <h3 className="agileits-title header-section">RSVP</h3>   
                     <div className="contact-info">
                         <div className="col-md-12 contact-grids contact-grids-w3right">
-                            <h5>Will you join us in celebrating?</h5>
-                            <h7>Total present: {totalPresent}</h7>
+                            <div className="row">
+                                <div className="col-xs-6">
+                                    <h5>Will you join us in celebrating?</h5>
+                                </div>
+                                <div className="col-xs-6 text-right">
+                                    <h5><b>{totalPresent}</b></h5> <h7>people will be presence</h7>
+                                </div>
+                            </div>
+                            
                             <div className="contact-form">  
                                 <form onSubmit={this.submitForm}>
                                     <div className="row">
@@ -90,7 +124,9 @@ class MessageComponent extends PureComponent {
                                             <div className="row">
                                                 <div className="col-xs-6">
                                                     <div
-                                                        className={"attending-option text-center" + (isAttend === true ? " active" : "")}
+                                                        className={"attending-option text-center " + (isAttend === true ? " active" : "") +
+                                                         ((this.state.showAttendAlert == true) && (this.state.isAttend == null) ? " warning" : "")
+                                                        }
                                                         onClick={() => this.setState({ isAttend: true })}
                                                     >
                                                         YES
@@ -98,7 +134,9 @@ class MessageComponent extends PureComponent {
                                                 </div>
                                                 <div className="col-xs-6" >
                                                     <div
-                                                        className={"attending-option text-center" + (isAttend === false ? " active" : "")}
+                                                        className={"attending-option text-center " + (isAttend === false ? " active" : "") +
+                                                         ((this.state.showAttendAlert == true) && (this.state.isAttend == null) ? " warning" : "")
+                                                        }
                                                         onClick={() => this.setState({ isAttend: false })}
                                                     >
                                                         NO
@@ -113,6 +151,11 @@ class MessageComponent extends PureComponent {
                                                             <span>Hopefully we can meet you there.</span>
                                                         }
                                                     </div>
+                                                }
+                                                { (this.state.showAttendAlert == true) && (this.state.isAttend == null) ?
+                                                    <div className="text-not-confirm">
+                                                        Kindly confirm your presence (<b>yes/no</b>)
+                                                    </div> : ""
                                                 }
                                             </div>
                                         </div>
@@ -140,7 +183,9 @@ class MessageComponent extends PureComponent {
                                             </div>
                                         </div>
                                         <div className="col-xs-12 text-center">
-                                            <button disabled={isLoading ? "disabled": ""} type="submit" >
+                                            <button
+                                                disabled={isLoading ? "disabled": ""} 
+                                                type="submit" >
                                                 {isLoading ? <i className="fa fa-spinner fa-spin" style={{marginRight: "2px"}}></i> : ""}
                                                 SUBMIT
                                             </button>
@@ -155,9 +200,8 @@ class MessageComponent extends PureComponent {
                 
                 <SweetAlert
                     show={this.state.showAlert}
-                    title="Thanks"
-                    text="Thank You"
-                    onConfirm={() => this.setState({ showAlert: false })}
+                    title={"Thank You, " + this.state.name + " :)"}
+                    onConfirm={() => this.closeAlert()}
                 />
 
                 <div className="container">

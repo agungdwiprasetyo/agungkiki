@@ -817,17 +817,26 @@ ul.simplefilter {
 /*-- //testimonial --*/
 /*-- contact --*/ 
 .attending-option {
-    border: 1px dashed #FF5722;
+    /* border: 1px dashed #FF5722; */
+    border: 1px dashed #999;
     padding: 10px;
     font-weight: bold;
     font-family: "KoHo";
     cursor: pointer;
 }
 
+.attending-option.warning {
+    border: 1px dashed red;
+}
+
 .attending-option.active {
     border: transparent;
     color: white;
     background-color: #FF5722;
+}
+
+.text-not-confirm {
+    color: red;
 }
 
 .contact-info h5 {
@@ -1569,7 +1578,7 @@ h4.agileits-title {
     font-size: 1.5em !important; 
 }
 .contact-info h5 {
-    font-size: 1.5em; 
+    font-size: 1.3em; 
 }
 .contact-info p {
     font-size: 1.5em; 

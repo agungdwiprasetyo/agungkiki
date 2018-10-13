@@ -6,6 +6,6 @@ Using `next.js`, server side for `React` rendering
 
 ```sh
 $ npm install
-$ npm run-script build
+$ npm run build
 $ npm start
 ```
