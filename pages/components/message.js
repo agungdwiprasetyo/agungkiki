@@ -177,7 +177,7 @@ class MessageComponent extends PureComponent {
                                                     <input 
                                                         value={this.state.waNumber} 
                                                         onChange={event => this.setState({ waNumber: event.target.value })}
-                                                        type="text" placeholder="WhatsApp/Phone number (e.g 0812xxxx)" required maxLength="15"/> 
+                                                        type="text" pattern="[0-9]+" placeholder="WhatsApp/Phone number (e.g 0812xxxx)" required maxLength="15"/> 
                                                         {err != null ? <span><br /><b>{err}</b></span> : ""}
                                                 </div>
                                             </div>
