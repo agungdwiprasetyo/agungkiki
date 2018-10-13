@@ -9,7 +9,7 @@ class MessageComponent extends PureComponent {
         this.state = {
             name: "",
             message: "",
-            email: "",
+            waNumber: "",
             isAttend: null,
             showAttendAlert: false,
             isLoading: false,
@@ -62,7 +62,7 @@ class MessageComponent extends PureComponent {
 
         let payload = {
             name: this.state.name,
-            email: this.state.email,
+            waNumber: this.state.waNumber,
             message: this.state.message,
             isAttend: this.state.isAttend
         }
@@ -84,7 +84,7 @@ class MessageComponent extends PureComponent {
         this.setState({
             name: "",
             message: "",
-            email: "",
+            waNumber: "",
             isAttend: null,
             showAttendAlert: false,
             isLoading: false,
@@ -171,13 +171,13 @@ class MessageComponent extends PureComponent {
                                                     <input 
                                                         value={this.state.name} 
                                                         onChange={event => this.setState({ name: event.target.value })}
-                                                        type="text" name="First Name" placeholder="Name" required />
+                                                        type="text" placeholder="Name" required />
                                                 </div>
                                                 <div className="col-xs-6">
                                                     <input 
-                                                        value={this.state.email} 
-                                                        onChange={event => this.setState({ email: event.target.value })}
-                                                        type="email" name="Email" placeholder="Email" required /> 
+                                                        value={this.state.waNumber} 
+                                                        onChange={event => this.setState({ waNumber: event.target.value })}
+                                                        type="text" placeholder="WhatsApp/Phone number (e.g 0812xxxx)" required maxLength="15"/> 
                                                         {err != null ? <span><br /><b>{err}</b></span> : ""}
                                                 </div>
                                             </div>
