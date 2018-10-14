@@ -41,9 +41,7 @@ class HomeComponent extends PureComponent {
                             </div>
                             <div className="agileits-w3layouts-icons">
                                 <div className="social-icon w3-agile">
-                                    <a href="https://web.facebook.com/agungdwip22" target="_blank" className="social-button facebook"><i className="fa fa-facebook"></i></a> 
                                     <a href="https://github.com/agungdwiprasetyo/agungkiki" target="_blank" className="social-button github"><i className="fa fa-github"></i></a> 
-                                    <a href="https://www.instagram.com/agungdp22" target="_blank" className="social-button instagram"><i className="fa fa-instagram"></i></a> 
                                 </div> 
                             </div>
                             <div className="clearfix"> </div>
