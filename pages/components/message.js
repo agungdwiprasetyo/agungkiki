@@ -13,6 +13,8 @@ class MessageComponent extends PureComponent {
             isAttend: null,
             showAttendAlert: false,
             isLoading: false,
+            isLoadingNumber: true,
+            totalPresent: 0,
             showAlert: false,
             err: null
         };
@@ -28,10 +30,13 @@ class MessageComponent extends PureComponent {
     }
 
     getTotalPresent() {
+        this.setState({ isLoadingNumber: true });
         this.api.apiGet("invitation/root?query={get_count(is_attend:true)}").then(response => {
-            this.setState({ totalPresent: response.data.get_count })
+            this.setState({ totalPresent: response.data.get_count });
+            this.setState({ isLoadingNumber: false });
         }).catch(err => {
             console.log(err);
+            this.setState({ isLoadingNumber: false });
         })
     }
 
@@ -96,6 +101,7 @@ class MessageComponent extends PureComponent {
 
     render() {
         const {
+            isLoadingNumber,
             isAttend,
             totalPresent,
             isLoading,
@@ -113,7 +119,7 @@ class MessageComponent extends PureComponent {
                                     <h5>Will you join us in celebrating?</h5>
                                 </div>
                                 <div className="col-xs-6 text-right">
-                                    <h5><b>{totalPresent}</b></h5> <h7>people will be presence</h7>
+                                    <h5><b>{!isLoadingNumber ? totalPresent : <i className="fa fa-spinner fa-spin"></i>}</b></h5> <h7>people will be presence</h7>
                                 </div>
                             </div>
                             
