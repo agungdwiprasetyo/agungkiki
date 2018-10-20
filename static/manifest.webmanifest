@@ -1,0 +1,14 @@
+{
+  "name": "Agung Kiki Wedding",
+  "short_name": "Agung Kiki Wedding",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f0f0f0",
+  "theme_color": "#ff6600",
+  "description": "Agung Kiki PWA.",
+  "icons": [{
+    "src": "https://agungdp.storage.googleapis.com/wedding/static/iconheader.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}

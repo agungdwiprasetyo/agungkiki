@@ -26,7 +26,14 @@
     "react-dom": "^16.5.2",
     "responsive-slides": "^1.55.0",
     "smooth-scroll": "^14.2.1",
+    "sw-precache-webpack-plugin": "^0.11.5",
     "sweetalert2-react": "^0.7.2",
     "zenscroll": "^4.0.2"
+  },
+  "devDependencies": {
+    "prop-types": "^15.6.0"
+  },
+  "engines": {
+    "node": "^9.2.0"
   }
 }

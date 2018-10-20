@@ -20,6 +20,15 @@ class HeadComponent extends PureComponent {
                 <link href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;subset=latin-ext" rel="stylesheet" />
                 <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css' />
                 <link rel="shortcut icon" href="https://agungdp.storage.googleapis.com/wedding/static/iconheader.png" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+                <link rel="manifest" href="/static/manifest.webmanifest" />
+                <meta name="theme-color" content="#ff6600" />
+                <link rel="apple-touch-icon" href="https://agungdp.storage.googleapis.com/wedding/static/iconheader.png" />
+                <meta name="apple-mobile-web-app-title" content="Agung Kiki Wedding" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="mobile-web-app-capable" content="yes" />
             </Head>
         );
     }
