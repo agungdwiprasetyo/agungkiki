@@ -8,21 +8,31 @@ export default class People extends PureComponent {
 
     render() {
         return (
-            <div id="event" class="about w3-agile">
-                <div class="container">
-                    <div class="contact-info">	
-                        <div class="col-md-12 text-center">
-                            <div class="cnt-address">
+            <div id="event" className="about w3-agile">
+                <div className="container">
+                    <div className="contact-info">	
+                        <div className="col-md-12 text-center">
+                            <div className="cnt-address">
                                 <h5>People List</h5> 
-                                <div>
-                                    <img src="https://storage.googleapis.com/agungdp/wedding/static/unautho.png" />
+                                <div className="">
+                                    <img src="https://storage.googleapis.com/agungdp/wedding/static/unautho.png" className="img-people" />
                                 </div>
-                                <p class="akad">You're Not Authorize</p>
-                                <p class="akad"><Link href="/"><a>Back To Home</a></Link></p>
+                                <p className="akad">You're Not Authorize</p>
+                                <p className="akad"><Link href="/"><a>Back To Home</a></Link></p>
                             </div>
                         </div>
                     </div>
                 </div>
+                <style jsx>{`
+                    .img-people {
+                        display: block;
+                        height: auto;
+                        max-width: 100%;
+                        border: 0;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                `}</style>
             </div>
         );
     }
