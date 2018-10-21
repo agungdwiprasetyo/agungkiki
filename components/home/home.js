@@ -1,7 +1,7 @@
 import React, {PureComponent} from "react";
 import zenscroll from "zenscroll";
 
-class HomeComponent extends PureComponent {
+export default class HomeComponent extends PureComponent {
     constructor(props) {
         super(props);
 
@@ -47,10 +47,32 @@ class HomeComponent extends PureComponent {
                             <div className="clearfix"> </div>
                         </div>	    
                     </div>
+                    <div className="agileinfo-footer">
+                        <div className="container">
+                            <div className="agile-logo">
+                            </div>
+                            <div className="agileits-w3layouts-icons">
+                                <button className="download-invitation text-center">
+                                    <a href="https://agungdp.storage.googleapis.com/wedding/static/invitation.pdf" target="_blank">
+                                        <i className="fa fa-download"></i>  Download Invitation
+                                    </a> 
+                                </button> 
+                            </div>
+                            <div className="clearfix"> </div>
+                        </div>	    
+                    </div>
                 </div>
+
+                <style jsx>{`
+                    .download-invitation {
+                        border: 1px dashed #999;
+                        padding: 10px;
+                        font-weight: bold;
+                        font-family: "KoHo";
+                        cursor: pointer;
+                    }
+                `}</style>
             </div> 
         );
     }
 }
-
-export default HomeComponent;

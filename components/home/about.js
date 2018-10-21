@@ -1,6 +1,6 @@
 import React, {PureComponent} from "react";
 
-class AboutComponent extends PureComponent {
+export default class AboutComponent extends PureComponent {
     constructor(props) {
         super(props);
     }
@@ -45,6 +45,4 @@ class AboutComponent extends PureComponent {
         );
     }
 }
-
-export default AboutComponent;
 

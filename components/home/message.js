@@ -1,8 +1,9 @@
 import React, { PureComponent } from "react";
 import SweetAlert from 'sweetalert2-react';
-import API from "../helper/helper";
+import API from "../../pages/helper/helper";
+import Link from 'next/link';
 
-class MessageComponent extends PureComponent {
+export default class MessageComponent extends PureComponent {
     constructor(props) {
         super(props);
 
@@ -119,7 +120,8 @@ class MessageComponent extends PureComponent {
                                     <h5>Will you join us in celebrating?</h5>
                                 </div>
                                 <div className="col-xs-6 text-right">
-                                    <h5><b>{!isLoadingNumber ? totalPresent : <i className="fa fa-spinner fa-spin"></i>}</b></h5> <h7>people will be presence</h7>
+                                    <h5><b>{!isLoadingNumber ? totalPresent : <i className="fa fa-spinner fa-spin"></i>}</b></h5>
+                                    <h7> <Link href={`/people`} prefetch><a>people</a></Link> will be presence</h7>
                                 </div>
                             </div>
                             
@@ -221,5 +223,3 @@ class MessageComponent extends PureComponent {
         );
     }
 }
-
-export default MessageComponent;

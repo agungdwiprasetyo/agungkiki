@@ -1,6 +1,6 @@
 import React, {PureComponent} from "react";
 
-class MapsComponent extends PureComponent {
+export default class MapsComponent extends PureComponent {
     constructor(props) {
         super(props);
     }
@@ -17,6 +17,4 @@ class MapsComponent extends PureComponent {
         );
     }
 }
-
-export default MapsComponent;
 

@@ -1,11 +1,15 @@
 import React, {PureComponent} from "react";
 import Head from "next/head";
 
-class HeadComponent extends PureComponent {
+export default class Layout extends PureComponent {
     render() {
+        const { title, description } = this.props;
+
         return(
             <Head>
-                <title>Agung & Kiki Wedding</title>
+                <title>{title}</title>
+                <meta name="description" content={description} />
+
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta name="keywords" content="Agung Kiki Wedding Invitation" />
@@ -33,5 +37,3 @@ class HeadComponent extends PureComponent {
         );
     }
 }
-
-export default HeadComponent;
