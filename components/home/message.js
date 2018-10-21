@@ -112,7 +112,7 @@ export default class MessageComponent extends PureComponent {
         return (
             <div className="contact">
                 <div className="container">
-                    <h3 className="agileits-title header-section">RSVP</h3>   
+                    {/* <h3 className="agileits-title header-section">RSVP</h3>    */}
                     <div className="contact-info">
                         <div className="col-md-12 contact-grids contact-grids-w3right">
                             <div className="row">

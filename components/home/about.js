@@ -34,7 +34,7 @@ export default class AboutComponent extends PureComponent {
                             <div className="cnt-address">
                                 <h5>Sunday, December 30, 2018</h5> 
                                 <p className="akad">Ceremony: <b>09.00 a.m</b>
-                                    <span>Reception: <b>01.00 p.m till finish</b></span>
+                                    <span>Reception: <b>01.00 p.m - finish</b></span>
                                     Jl. H. Liyas II No.77, Paninggilan Utara, Ciledug, Kota Tangerang, Banten 15153
                                 </p> 
                             </div>

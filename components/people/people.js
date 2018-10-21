@@ -17,7 +17,7 @@ export default class People extends PureComponent {
                                 <div className="">
                                     <img src="https://storage.googleapis.com/agungdp/wedding/static/unautho.png" className="img-people" />
                                 </div>
-                                <p className="akad">You're Not Authorize</p>
+                                <p className="akad">Sorry, you're not authorize</p>
                                 <p className="akad"><Link href="/"><a>Back To Home</a></Link></p>
                             </div>
                         </div>
