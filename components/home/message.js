@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import SweetAlert from 'sweetalert2-react';
-import API from "../../pages/helper/helper";
+import API from "../../helper/helper";
 import Link from 'next/link';
 
 export default class MessageComponent extends PureComponent {

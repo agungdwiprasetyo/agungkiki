@@ -1,5 +1,5 @@
 import React, {PureComponent} from "react";
-import API from "../../pages/helper/helper";
+import API from "../../helper/helper";
 
 export default class AboutComponent extends PureComponent {
     constructor(props) {
