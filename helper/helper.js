@@ -4,14 +4,19 @@ import "isomorphic-fetch";
 const apiUrl = "http://api.agungdwiprasetyo.com/wedding";
 
 export default class API extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
-    apiGet(urlPath) {
+    apiGet(urlPath, token) {
+        let headers = { 
+            'content-type': 'application/json'
+        };
+
+        if (token) {
+            headers["Authorization"] = `Bearer ${token}`
+        };
+
         return fetch(`${apiUrl}/${urlPath}`, {
-            method: 'GET',
-            headers: { 'content-type': 'application/json' }
+                method: 'GET',
+                headers: headers
             })
             .then(response => {
                 return response.json();

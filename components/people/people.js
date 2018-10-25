@@ -2,37 +2,61 @@ import React, { PureComponent } from "react";
 import Link from 'next/link';
 
 export default class People extends PureComponent {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
+        const { peoples } = this.props;
+
         return (
-            <div id="event" className="about w3-agile">
-                <div className="container">
-                    <div className="contact-info">	
-                        <div className="col-md-12 text-center">
-                            <div className="cnt-address">
-                                <h5>People List</h5> 
-                                <div className="">
-                                    <img src="https://storage.googleapis.com/agungdp/wedding/static/unautho.png" className="img-people" />
-                                </div>
-                                <p className="akad">Sorry, you're not authorize</p>
-                                <p className="akad"><Link href="/"><a>Back To Home</a></Link></p>
-                            </div>
-                        </div>
+            <div className="peopleList">
+                { peoples.map( (people) => (
+                <div className="peopleItem" key={ people.id }>
+                    <h2>{ people.name }</h2>
+                    <div className="peopleDetails">
+                        <strong>{ people.waNumber }</strong>
+                    </div>
+                    <div className="peopleDetails">
+                        <strong>{ people.message }</strong>
+                    </div>
+                    <div className="peopleDetails">
+                        { people.isAttend ? <strong>Presence</strong> : "Not presence" }
                     </div>
                 </div>
+                ) ) }
+
                 <style jsx>{`
-                    .img-people {
-                        display: block;
-                        height: auto;
-                        max-width: 100%;
-                        border: 0;
-                        margin-left: auto;
-                        margin-right: auto;
-                    }
+                .peopleList {
+                    padding: 0 1em;
+                }
+                .peopleItem {
+                    padding: 1em 0;
+                    border-bottom: 1px solid rgba(0,0,0,0.1);
+                }
+                h2 {
+                    font-size: 1.1em;
+                    font-weight: 400;
+                    margin: 0;
+                    margin-bottom: 0.5em;
+                }
+                h2 a {
+                    color: #333;
+                    text-decoration: none;
+                }
+                h2 a:hover {
+                    text-decoration: underline;
+                }
+                .peopleDetails {
+                    font-size: 0.9em;
+                    font-weight: bold;
+                }
+                .peopleDetails strong {
+                    margin-right: 1em;
+                }
+                .peopleDetails a {
+                    color: #ff6600;
+                    text-decoration: none;
+                }
                 `}</style>
+
             </div>
         );
     }

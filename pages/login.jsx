@@ -1,15 +1,14 @@
 import React, { PureComponent } from "react";
 import Layout from "../components/Layout";
-import People from "../components/people/people";
+import Login from "../components/login/login";
 import 'isomorphic-fetch';
 
-export default class PeoplePage extends PureComponent {
-
+export default class LoginPage extends PureComponent {
     render() {
         return(
           <main>
-            <Layout title={ "People List" } showBack={ true } />
-            <People />
+              <Layout title={ "Login" } showBack={ true } />
+              <Login />
           </main>
         );
     }
