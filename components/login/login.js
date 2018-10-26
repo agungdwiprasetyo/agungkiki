@@ -69,7 +69,7 @@ export default class Login extends PureComponent {
 
         return (
             <div className="about w3-agile">
-                <div className="container">
+                <div className="container container-login">
                     <div className="contact-info">	
                         <div className="col-md-12 text-center">
                             <div className="cnt-address">
@@ -130,6 +130,11 @@ export default class Login extends PureComponent {
                         -moz-border-radius: 3px;
                         -o-border-radius: 3px;
                         -ms-border-radius: 3px;
+                    }
+                    @media(min-width:1000px){
+                        .container-login {
+                            width: 40%;
+                        }
                     }
                 `}</style>
             </div>
