@@ -20,7 +20,7 @@ export default class MessageComponent extends PureComponent {
             err: null
         };
 
-        this.api = new API;
+        this.api = new API();
 
         this.handleChangeState = this.handleChangeState.bind(this);
         this.submitForm = this.submitForm.bind(this);
@@ -32,7 +32,7 @@ export default class MessageComponent extends PureComponent {
 
     getTotalPresent() {
         this.setState({ isLoadingNumber: true });
-        this.api.apiGet("invitation/root?query={get_count(is_attend:true)}").then(response => {
+        this.api.GET("invitation/root?query={get_count(is_attend:true)}").then(response => {
             this.setState({ totalPresent: response.data.get_count });
             this.setState({ isLoadingNumber: false });
         }).catch(err => {
@@ -73,7 +73,7 @@ export default class MessageComponent extends PureComponent {
             isAttend: this.state.isAttend
         }
 
-        this.api.apiPost("invitation/save", payload).then(response => {
+        this.api.POST("invitation/save", payload).then(response => {
             if (response.success) {
                 this.setState({ showAlert: true });
             } else {
@@ -121,7 +121,7 @@ export default class MessageComponent extends PureComponent {
                                 </div>
                                 <div className="col-xs-6 text-right">
                                     <h5><b>{!isLoadingNumber ? totalPresent : <i className="fa fa-spinner fa-spin"></i>}</b></h5>
-                                    <h7> <Link href={`/people`} prefetch><a>people</a></Link> will be presence</h7>
+                                    <Link href={`/people`} prefetch><a>people</a></Link> will be presence
                                 </div>
                             </div>
                             

@@ -5,9 +5,14 @@ import Unauthorized from "../components/unauthorized";
 import 'isomorphic-fetch';
 import jsHttpCookie from 'cookie';
 import jsCookie from 'js-cookie';
-import Error from 'next/error';
 import API from "../helper/helper";
 import Link from 'next/link';
+import NProgress from 'nprogress';
+import Router from 'next/router';
+
+Router.events.on('routeChangeStart', () => NProgress.start())
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 export default class extends React.Component {
     static async getInitialProps({ req, res, query }) {
@@ -25,10 +30,9 @@ export default class extends React.Component {
             }
 
             page = query.page ? parseInt(query.page) : 1;
-
-            const api = new API();
-
-            const request = await api.apiGet(`invitation/all?page=${page}`, cookie.token);
+            
+            const api = new API(cookie.token);
+            const request = await api.GET(`invitation/all?page=${page}`);
 
             status = request.status;
             data = request.data!=null ? request.data : [];

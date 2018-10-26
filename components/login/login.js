@@ -17,7 +17,7 @@ export default class Login extends PureComponent {
             user: {}
         };
 
-        this.api = new API;
+        this.api = new API();
 
         this.submitForm = this.submitForm.bind(this);
         this.closeAlert = this.closeAlert.bind(this);
@@ -36,7 +36,7 @@ export default class Login extends PureComponent {
             password: this.state.password
         };
 
-        this.api.apiPost("invitation/user/login", payload).then(response => {
+        this.api.POST("invitation/user/login", payload).then(response => {
             if (response.success) {
                 this.setState({ 
                     showAlert: true,

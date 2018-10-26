@@ -10,7 +10,7 @@ export default class AboutComponent extends PureComponent {
             event: {}
         };
 
-        this.api = new API;
+        this.api = new API();
 
         this.getEvents = this.getEvents.bind(this);
 
@@ -21,7 +21,7 @@ export default class AboutComponent extends PureComponent {
         this.setState({
             loading: true
         });
-        this.api.apiGet("invitation/event").then(response => {
+        this.api.GET("invitation/event").then(response => {
             this.setState({loading: false});
             this.setState({event: response.data});
         }).catch(err => {
@@ -41,9 +41,9 @@ export default class AboutComponent extends PureComponent {
 
         const Event = (props)=>{
             return (
-                <main>
+                <abbr>
                     {props.name}: <b>{props.data}</b>
-                </main>
+                </abbr>
             );
         }
 
@@ -73,10 +73,10 @@ export default class AboutComponent extends PureComponent {
                     <div className="contact-info">	
                         <div className="col-md-12 text-center">
                             <div className="cnt-address">
-                                <h5> { loading ? <div className="animated-background date-loading"></div> : event.date } </h5> 
-                                <p className="akad"> { loading ? <div className="animated-background ceremony-loading"></div> : <Event name="Ceremony" data={event.ceremony} /> }
-                                    <span>{ loading ? <div className="animated-background reception-loading"></div> : <Event name="Reception" data={event.reception} /> }</span>
-                                    { loading ? <div className="animated-background address-loading"></div> : event.address }
+                                <h5 className="akad"> { loading ? <div className="animated-background date-loading"></div> : event.date } </h5> 
+                                <p className="akad"> { loading ? <abbr className="animated-background ceremony-loading"></abbr> : <Event name="Ceremony" data={event.ceremony} /> }
+                                    <span>{ loading ? <abbr className="animated-background reception-loading"></abbr> : <Event name="Reception" data={event.reception} /> }</span>
+                                    { loading ? <abbr className="animated-background address-loading"></abbr> : event.address }
                                 </p> 
                             </div>
                         </div>

@@ -1,17 +1,21 @@
 import React from "react";
 import "isomorphic-fetch";
+import NProgress from 'nprogress';
 
 const apiUrl = "http://api.agungdwiprasetyo.com/wedding";
 
 export default class API extends React.Component {
+    constructor(props) {
+        super(props);
+    }
 
-    apiGet(urlPath, token) {
+    GET(urlPath) {
         let headers = { 
             'content-type': 'application/json'
         };
 
-        if (token) {
-            headers["Authorization"] = `Bearer ${token}`
+        if (this.props) {
+            headers["Authorization"] = `Bearer ${this.props}`
         };
 
         return fetch(`${apiUrl}/${urlPath}`, {
@@ -26,7 +30,7 @@ export default class API extends React.Component {
             });
     };
 
-    apiPost(urlPath, body) {
+    POST(urlPath, body) {
         return fetch(`${apiUrl}/${urlPath}`, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
