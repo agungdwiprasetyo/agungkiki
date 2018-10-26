@@ -63,6 +63,8 @@ export default class extends React.Component {
                         <style jsx>{`
                             footer {
                                 padding: 2em 1em;
+                                text-align: right;
+                                margin-right: 50px;
                             }
                             footer a, span {
                                 font-size: 1.5em;

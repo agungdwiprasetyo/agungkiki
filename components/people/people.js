@@ -7,21 +7,32 @@ export default class People extends PureComponent {
         const { peoples } = this.props;
 
         return (
-            <div className="peopleList">
-                { peoples.map( (people) => (
-                <div className="peopleItem" key={ people.id }>
-                    <h2>{ people.name }</h2>
-                    <div className="peopleDetails">
-                        <strong>{ people.waNumber }</strong>
-                    </div>
-                    <div className="peopleDetails">
-                        <strong>{ people.message }</strong>
-                    </div>
-                    <div className="peopleDetails">
-                        { people.isAttend ? <strong>Presence</strong> : "Not presence" }
+            <div className="about w3-agile">
+                <div className="container">
+                    <div className="contact-info">	
+                        <div className="col-md-12">
+                            <div className="cnt-address text-center">
+                                <h5>People List</h5>
+                            </div>
+                            <div className="peopleList">
+                                { peoples.map( (people) => (
+                                <div className="peopleItem" key={ people.id }>
+                                    <h2>{ people.name }</h2>
+                                    <div className="peopleDetails">
+                                        <strong>{ people.waNumber }</strong>
+                                    </div>
+                                    <div className="peopleDetails">
+                                        <strong>{ people.message }</strong>
+                                    </div>
+                                    <div className="peopleDetails">
+                                        { people.isAttend ? <strong>Presence</strong> : "Not presence" }
+                                    </div>
+                                </div>
+                                ) ) }
+                            </div>
+                        </div>
                     </div>
                 </div>
-                ) ) }
 
                 <style jsx>{`
                 .peopleList {

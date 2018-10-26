@@ -3,7 +3,8 @@ import Link from 'next/link';
 import SweetAlert from 'sweetalert2-react';
 import API from "../../helper/helper";
 import jsCookie from 'js-cookie';
-import Router from 'next/router'
+import Router from 'next/router';
+import NProgress from 'nprogress';
 
 export default class Login extends PureComponent {
     constructor(props) {
@@ -14,6 +15,7 @@ export default class Login extends PureComponent {
             password: "",
             isLoading: false,
             showAlert: false,
+            err: false,
             user: {}
         };
 
@@ -25,10 +27,12 @@ export default class Login extends PureComponent {
 
     submitForm(event) {
         event.preventDefault();
+        NProgress.start();
 
         this.setState({
             isLoading: true,
-            showAlert: false
+            showAlert: false,
+            err: false
         });
 
         let payload = {
@@ -43,11 +47,13 @@ export default class Login extends PureComponent {
                     user: response.data.user
                 });
                 jsCookie.set('token', response.data.token);
+            } else {
+                this.setState({err: true});
             }
             this.setState({isLoading: false});
+            NProgress.done();
         }).catch(err => {
-            // this.handleChangeState("err", err.message);
-            // this.handleChangeState("isLoading", false);
+            NProgress.done();
         });
     }
 
@@ -57,11 +63,12 @@ export default class Login extends PureComponent {
 
     render() {
         const {
-            isLoading
+            isLoading,
+            err
         } = this.state;
 
         return (
-            <div id="event" className="about w3-agile">
+            <div className="about w3-agile">
                 <div className="container">
                     <div className="contact-info">	
                         <div className="col-md-12 text-center">
@@ -90,6 +97,8 @@ export default class Login extends PureComponent {
                                                 {isLoading ? <i className="fa fa-spinner fa-spin" style={{marginRight: "2px"}}></i> : ""}
                                                 LOGIN
                                             </button>
+                                            <br />
+                                            { err ? <b>Invalid username/password</b> : ""}
                                         </div>
                                     </div>
                                 </form> 
