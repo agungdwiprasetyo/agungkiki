@@ -21,14 +21,18 @@ export default class extends React.Component {
         let cookie = {};
         try {
             if (req && req.headers) {
-                    cookie = jsHttpCookie.parse(req.headers.cookie);
+                cookie = jsHttpCookie.parse(req.headers.cookie);
             } else {
                 var token = jsCookie.get("token");
                 cookie.token = token;
             }
         } catch (e) {
-            var token = jsCookie.get("token");
-            cookie.token = token;
+            if (req && req.headers) {
+                cookie = jsHttpCookie.parse(req.headers.cookie);
+            } else {
+                var token = jsCookie.get("token");
+                cookie.token = token;
+            }
         }
 
         page = query.page ? parseInt(query.page) : 1;
