@@ -27,6 +27,12 @@ export default class People extends PureComponent {
                                     <div className="peopleDetails">
                                         { people.isAttend ? <strong>Presence</strong> : "Not presence" }
                                     </div>
+                                    <div className="peopleDetails">
+                                    {(new Date(people.created)).toLocaleDateString('en-US', { 
+                                        weekday: 'short', year: 'numeric', month: 'short', day: 'numeric',
+                                        hour: 'numeric', minute: 'numeric', second: 'numeric'
+                                    })}
+                                    </div>
                                 </div>
                                 ) ) }
                             </div>

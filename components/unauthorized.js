@@ -9,12 +9,12 @@ export default class Unauthorized extends PureComponent {
                     <div className="contact-info">	
                         <div className="col-md-12 text-center">
                             <div className="cnt-address">
-                                <h5>People List</h5> 
+                                <h5 className="unauth-header">People List</h5> 
                                 <div className="">
                                     <img src="https://storage.googleapis.com/agungdp/wedding/static/unautho.png" className="img-people" />
                                 </div>
-                                <p className="akad">Sorry, you're not authorize</p>
-                                <p className="akad"><Link href="/"><a>Back To Home</a></Link> or <Link href="/login"><a>Login</a></Link></p>
+                                <p className="unauth">Sorry, you're not authorize</p>
+                                <p className="unauth"><Link href="/"><a>Back To Home</a></Link> or <Link href="/login"><a>Login</a></Link></p>
                             </div>
                         </div>
                         <div className="col-md-12">
@@ -25,10 +25,19 @@ export default class Unauthorized extends PureComponent {
                     .img-people {
                         display: block;
                         height: auto;
-                        max-width: 100%;
+                        max-width: 70%;
                         border: 0;
                         margin-left: auto;
                         margin-right: auto;
+                        margin-top: 10px;
+                    }
+
+                    .unauth-header {
+                        font-size: 2em;
+                    }
+
+                    .unauth {
+                        font-size: 1.5em;
                     }
 
                     @keyframes placeHolderShimmer{

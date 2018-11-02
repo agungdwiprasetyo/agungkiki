@@ -308,7 +308,8 @@ h3.agileits-title {
     letter-spacing: 2px;
     color: #FF5722;
     text-align: center;
-    margin-bottom: 0.8em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-weight: 600;
 }
 h4.agileits-title {
@@ -316,7 +317,7 @@ h4.agileits-title {
     letter-spacing: 2px;
     color: #FF5722;
     text-align: center;
-    margin-bottom: 0.8em;
+    margin-bottom: 0.1em;
     font-weight: 600;
 }
 .akad {
@@ -850,9 +851,10 @@ ul.simplefilter {
     font-size: 2em;
     color: #e4861a;
     letter-spacing: 2px;
+    margin-bottom: 1px;
 }
 .contact-info p { 
-    margin: 1em 0 0;
+    margin: 0.25em 0 0;
 }
 .contact-form {
     margin-top: 1.5em;
@@ -992,7 +994,7 @@ ul.simplefilter {
 .footer-btm-agileinfo {
     border-top: 0.1px solid #ccc;
     padding-top: 0.1em;
-    margin-top: 0.1em;
+    margin-top: 1em;
 }    
 .footer-grid h3 {
     font-size: 2.8em;
@@ -1059,8 +1061,8 @@ ul.simplefilter {
 } 
 .copy-w3lsright p {
     color: #fff;
-    margin-top: 1.2em;
-    letter-spacing: 2px;
+    margin-top: 0.5em;
+    letter-spacing: 1.7px;
     font-weight: 200;
 }
 .copy-w3lsright p a{ 
@@ -1111,7 +1113,7 @@ ul.simplefilter {
     padding: 18em 0;
 }
 .footer-agile {
-    padding: 3em 0; 
+    padding: 2em 0; 
 }
 }
 @media(max-width:1080px){
@@ -1374,13 +1376,13 @@ h3.agileits-title {
     float: inherit;
 }
 .footer-agile {
-    padding: 2.5em 0;
+    padding: 1em 0;
 } 
 .footer-grid h3 {
     font-size: 2.3em;
 }
 .contact-info p {
-    margin: 0.5em 0 0;
+    margin: 0.25em 0 0;
 } 
 .modal-dialog { 
     width: 80%;
@@ -1469,7 +1471,7 @@ h3.agileits-title {
     font-size: 2.3em;
 }
 h3.agileits-title {
-    font-size: 3em;
+    font-size: 3.8em;
     margin-bottom: 0.5em;
 }
 .news-wthreegrid h5 {
@@ -1579,16 +1581,16 @@ h3.agileits-title {
     font-size: 3.6em !important; 
 }
 h3.header-section {
-    font-size: 2em !important; 
+    font-size: 1.5em !important; 
 }
 h4.agileits-title {
     font-size: 1.5em !important; 
 }
 .contact-info h5 {
-    font-size: 1.3em; 
+    font-size: 1.4em; 
 }
 .contact-info p {
-    font-size: 1.5em; 
+    font-size: 0.8em; 
 }
 .callbacks_nav { 
     left: 3%; 
@@ -1764,7 +1766,7 @@ p {
     font-size: 0.9em; 
 }
 .contact-info h5 {
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 .contact-grids {
     padding: 0;

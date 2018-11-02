@@ -41,9 +41,9 @@ export default class AboutComponent extends PureComponent {
 
         const Event = (props)=>{
             return (
-                <abbr>
-                    {props.name}: <b>{props.data}</b>
-                </abbr>
+                <p>
+                    {props.name ? props.name + ": " : ""} <b>{props.data}</b>
+                </p>
             );
         }
 
@@ -55,14 +55,8 @@ export default class AboutComponent extends PureComponent {
 
                 <div className="container">
                     <div className="about-agileinfo-row">
-                        <div className="col-md-2 col-sm-2 about-w3grids about-w3left">
-                            <h3 className="agileits-title"></h3>
-                        </div>
-                        <div className="col-md-8 col-sm-8 about-w3grids about-w3limg">
+                        <div className="col-md-12 about-w3grids about-w3limg">
                             <h3 className="agileits-title font-wedding">Agung & Kiky</h3>
-                        </div>
-                        <div className="col-md-2 col-sm-2 about-w3grids about-w3right">
-                            <h3 className="agileits-title"></h3>
                         </div>
                         <div className="clearfix"> </div>
                     </div>
@@ -74,10 +68,15 @@ export default class AboutComponent extends PureComponent {
                         <div className="col-md-12 text-center">
                             <div className="cnt-address">
                                 <h5 className="akad"> { loading ? <div className="animated-background date-loading"></div> : event.date } </h5> 
-                                <p className="akad"> { loading ? <abbr className="animated-background ceremony-loading"></abbr> : <Event name="Ceremony" data={event.ceremony} /> }
-                                    <span>{ loading ? <abbr className="animated-background reception-loading"></abbr> : <Event name="Reception" data={event.reception} /> }</span>
-                                    { loading ? <abbr className="animated-background address-loading"></abbr> : event.address }
-                                </p> 
+                                <div className="akad"> 
+                                    { loading ? <div className="animated-background ceremony-loading"></div> : <Event name="Ceremony" data={event.ceremony} /> }
+                                </div>
+                                <div className="akad"> 
+                                    { loading ? <div className="animated-background reception-loading"></div> : <Event name="Reception" data={event.reception} /> }
+                                </div>
+                                <div className="akad"> 
+                                    { loading ? <div className="animated-background address-loading"></div> : <Event name="" data={event.address} /> }
+                                </div> 
                             </div>
                         </div>
                     </div>
@@ -124,6 +123,7 @@ export default class AboutComponent extends PureComponent {
                         min-height: 40px;
                     }
                     .ceremony-loading {
+                        margin-top: 10px;
                         max-width: 172px;
                         min-height: 30px;
                     }
@@ -133,7 +133,7 @@ export default class AboutComponent extends PureComponent {
                         min-height: 30px;
                     }
                     .address-loading {
-                        margin-top: 20px;
+                        margin-top: 5px;
                         max-width: 672px;
                         min-height: 30px;
                     }
