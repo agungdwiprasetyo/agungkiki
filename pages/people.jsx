@@ -18,30 +18,27 @@ export default class extends React.Component {
     static async getInitialProps({ req, res, query }) {
         var status, data, page;
 
+        let cookie = {};
         try {
-            let cookie = {};
-            if (req) {
-                if (req.headers) {
+            if (req && req.headers) {
                     cookie = jsHttpCookie.parse(req.headers.cookie);
-                }
             } else {
                 var token = jsCookie.get("token");
                 cookie.token = token;
             }
-
-            page = query.page ? parseInt(query.page) : 1;
-            
-            const api = new API(cookie.token);
-            const request = await api.GET(`invitation/all?page=${page}`);
-
-            status = request.status;
-            data = request.data!=null ? request.data : [];
         } catch (e) {
-            console.log(e);
-            status = 401;
-            data = null;
-            page = 1;
+            var token = jsCookie.get("token");
+            cookie.token = token;
         }
+
+        page = query.page ? parseInt(query.page) : 1;
+        
+        const api = new API(cookie.token);
+        const request = await api.GET(`invitation/all?page=${page}`);
+
+        status = request.status;
+        data = request.data!=null ? request.data : [];
+
         return { status, data, page }
     }
 
