@@ -15,6 +15,10 @@ Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
 export default class extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    
     static async getInitialProps({ req, res, query }) {
         var status, data, page;
 
@@ -27,12 +31,8 @@ export default class extends React.Component {
                 cookie.token = token;
             }
         } catch (e) {
-            if (req && req.headers) {
-                cookie = jsHttpCookie.parse(req.headers.cookie);
-            } else {
-                var token = jsCookie.get("token");
-                cookie.token = token;
-            }
+            var token = jsCookie.get("token");
+            cookie.token = token;
         }
 
         page = query.page ? parseInt(query.page) : 1;
