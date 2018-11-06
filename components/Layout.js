@@ -1,6 +1,8 @@
 import React, {PureComponent} from "react";
 import Head from "next/head";
 
+import '../styles/style.scss';
+
 export default class Layout extends PureComponent {
     render() {
         const { title, description } = this.props;
@@ -14,7 +16,6 @@ export default class Layout extends PureComponent {
                 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
                 <meta name="keywords" content="Agung Kiki Wedding Invitation" />
                 <link href="https://agungdp.storage.googleapis.com/wedding/static/css/bootstrap.css" type="text/css" rel="stylesheet" media="all" />
-                <link href="/static/css/style.css" type="text/css" rel="stylesheet" media="all" />  
                 <link href="https://storage.googleapis.com/agungdp/wedding/static/css/nprogress.css" type="text/css" rel="stylesheet" media="all" />
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.4/sweetalert2.min.css" type="text/css" rel="stylesheet" media="all" />  
                 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /> 

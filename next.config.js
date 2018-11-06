@@ -18,3 +18,6 @@ module.exports = {
     return config
   }
 }
+
+const withSass = require('@zeit/next-sass')
+module.exports = withSass()
