@@ -7,19 +7,23 @@ export default class FooterComponent extends PureComponent {
 
     render() {
         return (
-            <div className="footer-agile">
-		        <div className="container">
-                    <div style={{color: "#fff", marginRight: 20}}><b>#2019gantistatus</b></div>
-                    <div className="footer-btm-agileinfo">
-                        <div className="col-md-12 col-xs-12 footer-grid footer-review">
-                            <div className="copy-w3lsright"> 
-                                <p>© {(new Date()).getFullYear()} <a href="https://www.linkedin.com/in/agung-dwi-prasetyo/" target="_blank">Agung Dwi Prasetyo</a>
-                                </p>
-                            </div> 
-                        </div> 
-                    </div>   
+            <footer>
+                <div className="container">
+                    <ul className="list-inline">
+                        <li>
+                            <a href="https://github.com/agungdwiprasetyo" target="_blank" title="Visit My Github Repository"><i className="fa fa-github fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/agung-dwi-prasetyo" target="_blank" title="See My Curriculum Vitae"><i className="fa fa-linkedin fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/agungdwip22" target="_blank"><i className="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <br />
+                    <p>© {(new Date()).getFullYear()} <a href="http://www.agungdwiprasetyo.com" target="_blank">Agung Dwi Prasetyo</a> | Software Engineer | #2019gantistatus</p>
                 </div>
-            </div> 
+            </footer>
         );
     }
 }

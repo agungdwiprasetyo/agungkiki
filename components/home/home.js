@@ -34,18 +34,6 @@ export default class HomeComponent extends PureComponent {
                                 </div>	
                             </li>
                         </ul>
-                    </div>	
-                    <div className="agileinfo-header">
-                        <div className="container">
-                            <div className="agile-logo">
-                            </div>
-                            <div className="agileits-w3layouts-icons">
-                                <div className="social-icon w3-agile">
-                                    <a href="https://github.com/agungdwiprasetyo/agungkiki" target="_blank" className="social-button github"><i className="fa fa-github"></i></a> 
-                                </div> 
-                            </div>
-                            <div className="clearfix"> </div>
-                        </div>	    
                     </div>
                     <div className="agileinfo-footer">
                         <div className="container">
