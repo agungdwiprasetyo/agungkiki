@@ -1,26 +1,34 @@
-import React from "react";
 import "isomorphic-fetch";
-import NProgress from 'nprogress';
 
 const apiUrl = "http://api.agungdwiprasetyo.com/wedding";
 
-export default class API extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    GET(urlPath) {
+export default class API {
+    constructor(token) {
         let headers = { 
             'content-type': 'application/json'
         };
 
-        if (this.props) {
-            headers["Authorization"] = `Bearer ${this.props}`
+        if (token) {
+            headers["Authorization"] = `Bearer ${token}`
         };
 
+        this.headers = headers;
+    }
+
+    isAuthenticate() {
+        return fetch(`${apiUrl}/invitation/auth`, {
+            method: 'GET',
+            headers: this.headers
+        })
+        .then(response => {
+            return response.json();
+        });
+    }
+
+    GET(urlPath) {
         return fetch(`${apiUrl}/${urlPath}`, {
                 method: 'GET',
-                headers: headers
+                headers: this.headers
             })
             .then(response => {
                 return response.json();
@@ -33,7 +41,7 @@ export default class API extends React.Component {
     POST(urlPath, body) {
         return fetch(`${apiUrl}/${urlPath}`, {
             method: 'POST',
-            headers: { 'content-type': 'application/json' },
+            headers: this.headers,
             body: JSON.stringify(body)
           })
           .then( r => {
@@ -44,9 +52,17 @@ export default class API extends React.Component {
           });
     };
 
-    render() {
-        return (
-            <div></div>
-        )
+    DELETE(urlPath, body) {
+        return fetch(`${apiUrl}/${urlPath}`, {
+            method: 'DELETE',
+            headers: this.headers,
+            body: JSON.stringify(body)
+          })
+          .then( r => {
+              return r.json();
+          })
+          .catch(err => {
+            console.error('fetch error: ', err)
+          });
     }
 }

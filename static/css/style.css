@@ -1584,7 +1584,7 @@ h3.header-section {
     font-size: 1.5em !important; 
 }
 h4.agileits-title {
-    font-size: 1.5em !important; 
+    font-size: 1.3em !important; 
 }
 .contact-info h5 {
     font-size: 1.4em; 
@@ -1874,3 +1874,42 @@ ul.simplefilter {
 } 
 }
 /*-- //responsive-design --*/
+
+.loader {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -30px;
+    z-index: 99999;
+}
+
+.loader::after,
+.loader::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 8px solid #ddd;
+    border-radius: 50%;
+    display: block;
+}
+  
+.loader::after {
+    content: "";
+    border-radius: 50%;
+    border-color: orange;
+    border-left-color: transparent;
+    animation: load 1s linear infinite;
+}
+@keyframes load {
+    0% {
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

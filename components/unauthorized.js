@@ -9,7 +9,7 @@ export default class Unauthorized extends PureComponent {
                     <div className="contact-info">	
                         <div className="col-md-12 text-center">
                             <div className="cnt-address">
-                                <h5 className="unauth-header">People List</h5> 
+                                <h5 className="unauth-header">401 Unauthorized</h5> 
                                 <div className="">
                                     <img src="https://storage.googleapis.com/agungdp/wedding/static/unautho.png" className="img-people" />
                                 </div>
