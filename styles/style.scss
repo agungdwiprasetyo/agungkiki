@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
     background: #fff;
     a {
       transition: 0.5s all;
@@ -13,19 +13,9 @@ body {
     }
   }
   
-  /* h1,h2,h3,h4,h5,h6{
-      margin:0;  
-      font-family: 'Tulpen One', cursive !important;
-  } */
-  
-  .header-home {
-    margin: 0;
-    font-family: 'Tulpen One', cursive !important;
-  }
-  
   .font-condensed {
     margin: 0;
-    font-family: 'Open Sans Condensed', sans-serif !important;
+    font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif' !important;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -148,9 +138,6 @@ body {
     }
   }
   
-  /*-- //social-icons --*/
-  /*-- //header --*/
-  
   .banner-w3lstext {
     padding: 20em 0;
   }
@@ -175,10 +162,7 @@ body {
       width: 50%;
       text-align: center;
       color: #fff;
-      /* line-height: 1.4em; */
       font-size: 2em;
-      /* letter-spacing: 2px; */
-      /* padding: .2em 0; */
     }
   }
   
@@ -325,10 +309,6 @@ body {
     }
   }
   
-  /*-- //slider-responsive --*/
-  /*-- //banner --*/
-  /*-- about --*/
-  
   .about, .table-book, .services, .team, .news, .contact, .testimonials {
     padding: 5em 0;
   }
@@ -337,6 +317,10 @@ body {
     font-size: 6em;
     letter-spacing: 2px;
     color: #FF5722;
+    // background: -webkit-linear-gradient(to right, #e4861a, #dc2430);
+    // background: linear-gradient(to right, #e4861a, #dc2430);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
     text-align: center;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
