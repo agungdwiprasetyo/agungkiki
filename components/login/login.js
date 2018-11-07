@@ -75,33 +75,52 @@ export default class Login extends PureComponent {
                             <div className="cnt-address">
                                 <h5>Login</h5>
                             </div>
-                            <div className="contact-form">  
-                                <form onSubmit={this.submitForm}>
-                                    <div className="row">
-                                        <div className="col-xs-12">
-                                            <input 
-                                                value={this.state.username} 
-                                                onChange={event => this.setState({ username: event.target.value })}
-                                                type="text" placeholder="Username" required />
-                                        </div>
-                                        <div className="col-xs-12">
-                                            <input 
-                                                value={this.state.password} 
-                                                onChange={event => this.setState({ password: event.target.value })}
-                                                type="password" placeholder="Password" required /> 
-                                        </div>
-                                        <div className="col-xs-12 text-center">
-                                            <button
-                                                disabled={isLoading ? "disabled": ""} 
-                                                type="submit" >
-                                                {isLoading ? <i className="fa fa-spinner fa-spin" style={{marginRight: "2px"}}></i> : ""}
-                                                LOGIN
-                                            </button>
-                                            <br />
-                                            { err ? <b>Invalid username/password</b> : ""}
-                                        </div>
+                            <div className="contact-form">
+                                <div className="row">
+                                    <div className="container-fluid">
+                                        <form className="form-horizontal" onSubmit={this.submitForm}>
+                                            <div className="form-group">
+                                                <div className="col-xs-12">
+                                                    <input className={err ? "form-control input-lg error" : "form-control input-lg"} 
+                                                        type="text" placeholder="Username" required
+                                                        value={this.state.username} 
+                                                        onChange={event => 
+                                                            this.setState({
+                                                                username: event.target.value,
+                                                                err: false
+                                                            })
+                                                        }
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="form-group">
+                                                <div className="col-xs-12">
+                                                    <input className={err ? "form-control input-lg error" : "form-control input-lg"} 
+                                                        type="password" placeholder="Password" required
+                                                        value={this.state.password} 
+                                                        onChange={event => 
+                                                            this.setState({
+                                                                password: event.target.value,
+                                                                err: false
+                                                            })
+                                                        }
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div className="form-group"> 
+                                                <div className="col-xs-12">
+                                                    <button type="submit" className="btn btn-info">
+                                                        {isLoading ? <i className="fa fa-spinner fa-spin" style={{marginRight: "2px"}}></i> : ""}
+                                                        LOGIN
+                                                    </button>
+                                                </div>
+                                                <div className="col-xs-12">
+                                                    { err ? <b>Invalid username/password</b> : ""}
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
-                                </form> 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -135,6 +154,10 @@ export default class Login extends PureComponent {
                         .container-login {
                             width: 40%;
                         }
+                    }
+
+                    .error {
+                        border-color: #d13127!important;
                     }
                 `}</style>
             </div>
