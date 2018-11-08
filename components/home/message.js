@@ -168,7 +168,7 @@ export default class MessageComponent extends PureComponent {
                                             </div>
                                         </div>
                                         <div className="col-xs-12">
-                                            <textarea 
+                                            <textarea className="form-control"
                                                 value={this.state.message} 
                                                 onChange={event => this.setState({ message: event.target.value })}
                                                 name="Message" placeholder="Leave message to us" required rows="1"></textarea>
@@ -176,13 +176,13 @@ export default class MessageComponent extends PureComponent {
                                         <div className="col-xs-12">
                                             <div className="row">
                                                 <div className="col-xs-6">
-                                                    <input 
+                                                    <input className="form-control input-lg"
                                                         value={this.state.name} 
                                                         onChange={event => this.setState({ name: event.target.value })}
                                                         type="text" placeholder="Name" required />
                                                 </div>
                                                 <div className="col-xs-6">
-                                                    <input 
+                                                    <input className="form-control input-lg"
                                                         value={this.state.waNumber} 
                                                         onChange={event => this.setState({ waNumber: event.target.value })}
                                                         type="text" pattern="[0-9]+" placeholder="WhatsApp/Phone number (e.g 0812xxxx)" required maxLength="15"/> 
