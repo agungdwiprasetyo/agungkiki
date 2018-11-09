@@ -5,12 +5,12 @@ import About from "../components/home/about";
 import Maps from "../components/home/maps";
 import Message from "../components/home/message";
 import Footer from "../components/home/footer";
-import NProgress from 'nprogress';
-import Router from 'next/router';
+// import NProgress from 'nprogress';
+// import Router from 'next/router';
 
-Router.events.on('routeChangeStart', () => NProgress.start())
-Router.events.on('routeChangeComplete', () => NProgress.done())
-Router.events.on('routeChangeError', () => NProgress.done())
+// Router.events.on('routeChangeStart', () => NProgress.start())
+// Router.events.on('routeChangeComplete', () => NProgress.done())
+// Router.events.on('routeChangeError', () => NProgress.done())
 
 class App extends Component {
     constructor(props) {

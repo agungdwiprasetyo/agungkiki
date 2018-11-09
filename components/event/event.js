@@ -119,7 +119,7 @@ export default class Event extends PureComponent {
                                 </div>
                             </div>
                             <div className="form-group"> 
-                                <div className="col-sm-offset-2 col-sm-10">
+                                <div className="text-center col-sm-12">
                                     <button type="submit" className="btn btn-info">Save</button>
                                 </div>
                             </div>
