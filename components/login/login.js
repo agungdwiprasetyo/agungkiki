@@ -1,10 +1,10 @@
 import React, { PureComponent } from "react";
-import Link from 'next/link';
 import SweetAlert from 'sweetalert2-react';
-import API from "../../helper/helper";
 import jsCookie from 'js-cookie';
 import Router from 'next/router';
 import NProgress from 'nprogress';
+
+import API from "../../helper/helper";
 
 export default class Login extends PureComponent {
     constructor(props) {
@@ -16,13 +16,27 @@ export default class Login extends PureComponent {
             isLoading: false,
             showAlert: false,
             err: false,
-            user: {}
+            user: {},
+            pageLoad: true
         };
 
         this.api = new API();
 
         this.submitForm = this.submitForm.bind(this);
         this.closeAlert = this.closeAlert.bind(this);
+    }
+
+    async componentDidMount () {
+        NProgress.start();
+        const api = new API();
+
+        const resp = await api.isAuthenticate();
+        NProgress.done();
+        if (resp.success) {
+            Router.push("/people");
+        } else {
+            this.setState({pageLoad: false});
+        }
     }
 
     submitForm(event) {
@@ -42,11 +56,11 @@ export default class Login extends PureComponent {
 
         this.api.POST("invitation/user/login", payload).then(response => {
             if (response.success) {
+                jsCookie.set('token', response.data.token);
                 this.setState({ 
                     showAlert: true,
                     user: response.data.user
                 });
-                jsCookie.set('token', response.data.token);
             } else {
                 this.setState({err: true});
             }
@@ -69,6 +83,7 @@ export default class Login extends PureComponent {
 
         return (
             <div className="about w3-agile">
+                { !this.state.pageLoad ? 
                 <div className="container container-login">
                     <div className="contact-info">	
                         <div className="col-md-12 text-center">
@@ -125,6 +140,7 @@ export default class Login extends PureComponent {
                         </div>
                     </div>
                 </div>
+                : "" }
 
                 <SweetAlert
                     show={this.state.showAlert}

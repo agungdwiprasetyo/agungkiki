@@ -2,7 +2,6 @@ import React from "react";
 
 import withAuth from  '../utils/withAuth';
 import People from "../components/people/people";
-import Header from "../components/Header";
 
 class PeoplePage extends React.Component {
     constructor(props) {
@@ -18,10 +17,7 @@ class PeoplePage extends React.Component {
         const { page } = this.props;
 
         return (
-            <div className="container">
-                <Header />
-                <People page={page}/>
-            </div>
+            <People page={page}/>
         );
     }
 }

@@ -2,7 +2,6 @@ import React, { PureComponent } from "react";
 
 import withAuth from  '../utils/withAuth';
 import Event from "../components/event/event";
-import Header from "../components/Header";
 
 class EventPage extends PureComponent {
     constructor(props) {
@@ -11,10 +10,7 @@ class EventPage extends PureComponent {
 
     render() {
         return (
-            <div className="container">
-                <Header />
-                <Event />
-            </div>
+            <Event />
         );
     }
 }
