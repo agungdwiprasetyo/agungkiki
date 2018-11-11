@@ -84,8 +84,8 @@ export default class Login extends PureComponent {
 
         return (
             <div>
-                { !this.state.pageLoad ? 
                 <section className="features">
+                    { !this.state.pageLoad ? 
                     <div className="container">
                         <div className="row">
                             <div className="col-lg-12 text-center">
@@ -158,8 +158,8 @@ export default class Login extends PureComponent {
                             </div>
                         </div>
                     </div>
+                    : "" }
                 </section>
-                : "" }
 
                 <SweetAlert
                     show={this.state.showAlert}
