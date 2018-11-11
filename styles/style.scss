@@ -94,11 +94,6 @@ body {
       width: 12%;
       display: inline-block;
       margin-top: -7px;
-          /* -webkit-animation: fa-spin 5s infinite linear;
-          -moz-animation: fa-spin 5s infinite linear;
-          -ms-animation: fa-spin 5s infinite linear;
-          -o-animation: fa-spin 5s infinite linear;
-          animation: fa-spin 5s infinite linear; */
     }
     float: left;
     width: 50%;
@@ -110,8 +105,6 @@ body {
     text-align: right;
     margin-top: 1em;
   }
-  
-  /*-- social-icons --*/
   
   .social-icon a {
     font-size: 1em;
@@ -165,8 +158,6 @@ body {
       font-size: 2em;
     }
   }
-  
-  /*-- top-nav --*/
   
   .top-nav {
     position: absolute;
@@ -233,11 +224,6 @@ body {
       }
     }
   }
-  
-  /*-- Animate the box-shadow to create the effect --*/
-  
-  /*-- //top-nav --*/
-  /*--- slider-css --*/
   
   .slider {
     position: relative;
@@ -317,10 +303,6 @@ body {
     font-size: 6em;
     letter-spacing: 2px;
     color: #FF5722;
-    // background: -webkit-linear-gradient(to right, #e4861a, #dc2430);
-    // background: linear-gradient(to right, #e4861a, #dc2430);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
     text-align: center;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -367,8 +349,6 @@ body {
   .about-w3grids.about-w3right h3.agileits-title {
     text-align: left;
   }
-  
-  /*-- progress-bars --*/
   
   .bar_group {
     position: relative;
@@ -458,11 +438,7 @@ body {
     margin-bottom: .5em;
     font-size: 1.1em;
   }
-  
-  /*-- //progress-bars --*/
-  /*-- //about --*/
-  /*-- table-book --*/
-  
+
   .table-book {
     background: url(https://storage.googleapis.com/agungdp/wedding/static/bg0.jpg) no-repeat center 0px fixed;
     background-size: cover;
@@ -521,9 +497,6 @@ body {
     color: #fff;
     letter-spacing: 9px;
   }
-  
-  /*-- //table-book --*/
-  /*-- services --*/
   
   .services-grid {
     i.fa {
@@ -609,9 +582,6 @@ body {
     transform: rotateY(180deg);
   }
   
-  /*-- //team --*/
-  /*-- portfolio --*/
-  
   .filtr-item {
     padding: 1em;
   }
@@ -633,8 +603,6 @@ body {
     float: right;
     width: 85%;
   }
-  
-  /* Filter controls */
   
   ul.simplefilter {
     float: left;
@@ -739,11 +707,6 @@ body {
     }
   }
   
-  /*--  Demo8 --*/
-  
-  /*-- //portfolio --*/
-  /*-- news --*/
-  
   .news {
     background: #007989;
     /* For browsers that do not support gradients */
@@ -817,9 +780,6 @@ body {
     float: right;
   }
   
-  /*-- //news --*/
-  /*-- about-modal --*/
-  
   .modal-open .modal {
     background: rgba(0, 0, 0, 0.48);
   }
@@ -862,9 +822,6 @@ body {
   .modal-body p {
     font-weight: 300;
   }
-  
-  /*-- //about-modal --*/
-  /*-- testimonial --*/
   
   .testimonials img {
     width: 100%;
@@ -916,9 +873,6 @@ body {
       border: none;
     }
   }
-  
-  /*-- //testimonial --*/
-  /*-- contact --*/
   
   .attending-option {
     /* border: 1px dashed #FF5722; */
@@ -1064,9 +1018,6 @@ body {
     border: none;
   }
   
-  /*-- //contact --*/
-  /*-- footer start here --*/
-  
   .footer-agile {
     padding: 2em 0 2em;
     background: #191d22;
@@ -1192,9 +1143,6 @@ body {
     }
   }
   
-  /*-- //footer end here --*/
-  /*-- slider-up-arrow --*/
-  
   #toTop {
     display: none;
     text-decoration: none;
@@ -1206,7 +1154,6 @@ body {
     height: 32px;
     border: none;
     text-indent: 100%;
-    // background: url("static/images/move-up.png") no-repeat 0px 0px;
   }
   
   #toTopHover {
@@ -1220,8 +1167,6 @@ body {
     filter: alpha(opacity = 0);
   }
   
-  /*-- //slider-up-arrow --*/
-  /*-- responsive-design --*/
   @media (max-width: 1280px) {
     .agileinfo-main {
       h3 {
@@ -1893,9 +1838,6 @@ body {
     .cnt-address {
       font-size: 1em !important;
     }
-    /* .font-wedding {
-        font-size: 6.5 !important;
-    } */
     .banner-w3lstext {
       padding: 10em 0;
     }
@@ -2088,8 +2030,6 @@ body {
     }
   }
   
-  /*-- //responsive-design --*/
-  
   .loader {
     position: fixed;
     width: 60px;
@@ -2164,4 +2104,111 @@ footer ul li a.active {
   
 .list-inline > li:first-child {
   padding-left: 0;
+}
+
+// AUTH PAGE STYLE
+.auth-page {
+
+  hr {
+    max-width: 100px;
+    margin: 25px auto 0;
+    border-width: 1px;
+    border-color: rgba(34, 34, 34, 0.1);
+    &.light {
+      border-color: white;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif' !important;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+
+  section {
+    padding: 100px 0;
+    h2 {
+      font-size: 50px;
+    }
+    &.features {
+      .section-heading {
+        margin-bottom: 100px;
+        h2 {
+          margin-top: 0;
+        }
+        p {
+          margin-bottom: 0;
+        }
+      }
+      .device-container, .feature-item {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      .device-container {
+        margin-bottom: 100px;
+      }
+      .feature-item {
+        text-align: center;
+        margin-bottom: 100px;
+        h3 {
+          font-size: 30px;
+        }
+        .form-label {
+          text-align: left !important;
+          font-weight: 300;
+        }
+      }
+      .form-separate {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .icon-left {
+        i {
+          font-size: 150px;
+          background: -webkit-linear-gradient(to left, #7b4397, #dc2430);
+          background: linear-gradient(to left, #7b4397, #dc2430);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    section.download .badges .badge-link {
+      display: inline-block;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    section.download h2 {
+      font-size: 70px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    section.features .device-container {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 992px) {
+    section.features {
+      .device-container, .feature-item {
+        max-width: none;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    section.cta .cta-content h2 {
+      font-size: 80px;
+    }
+  }
+
+  .btn {
+    letter-spacing: 1px;
+    border-radius: 3px;
+  }
 }

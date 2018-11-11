@@ -82,64 +82,82 @@ export default class Login extends PureComponent {
         } = this.state;
 
         return (
-            <div className="about w3-agile">
+            <div className="auth-page">
                 { !this.state.pageLoad ? 
-                <div className="container container-login">
-                    <div className="contact-info">	
-                        <div className="col-md-12 text-center">
-                            <div className="cnt-address">
-                                <h5>Login</h5>
+                <section className="features">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12 text-center">
+                                <div className="section-heading">
+                                    <h2>Login</h2>
+                                    <p className="text-muted"></p>
+                                    <hr />
+                                </div>
                             </div>
-                            <div className="contact-form">
-                                <div className="row">
-                                    <div className="container-fluid">
-                                        <form className="form-horizontal" onSubmit={this.submitForm}>
-                                            <div className="form-group">
-                                                <div className="col-xs-12">
-                                                    <input className={err ? "form-control input-lg error" : "form-control input-lg"} 
-                                                        type="text" placeholder="Username" required
-                                                        value={this.state.username} 
-                                                        onChange={event => 
-                                                            this.setState({
-                                                                username: event.target.value,
-                                                                err: false
-                                                            })
-                                                        }
-                                                    />
+                        </div>
+                        <div className="row">
+                            <div className="">
+                                <div className="container-fluid">
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <div className="feature-item icon-left">
+                                                <i className="fa fa-sign-in fa-fw fa-3x text-primary"></i>
+                                                <h4>Login for manage data</h4>
+                                            </div>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <div className="feature-item">
+                                                <div className="container-fluid">
+                                                    <form onSubmit={this.submitForm}>
+                                                        <div className="form-group">
+                                                            <h4 className="form-label">Username:</h4>
+                                                            <input className={err ? "form-control input-lg error" : "form-control input-lg"} 
+                                                                type="text" required
+                                                                value={this.state.username} 
+                                                                onChange={event => 
+                                                                    this.setState({
+                                                                        username: event.target.value,
+                                                                        err: false
+                                                                    })
+                                                                }
+                                                            />
+                                                        </div>
+                                                        <div className="form-separate"></div>
+                                                        <div className="form-group">
+                                                            <h4 className="form-label">Password:</h4>
+                                                            <input className={err ? "form-control input-lg error" : "form-control input-lg"} 
+                                                                type="password" required
+                                                                value={this.state.password} 
+                                                                onChange={event => 
+                                                                    this.setState({
+                                                                        password: event.target.value,
+                                                                        err: false
+                                                                    })
+                                                                }
+                                                            />
+                                                        </div>
+                                                        <div className="form-separate"></div>
+                                                        <div className="form-group"> 
+                                                            <div className="col-md-12">
+                                                                <button type="submit" className="btn btn-primary btn-lg">
+                                                                    {isLoading ? <i className="fa fa-spinner fa-spin" style={{marginRight: "6px"}}></i> : ""}
+                                                                    Login
+                                                                </button>
+                                                            </div>
+                                                            <div className="col-md-12 error">
+                                                                { err ? <b>Invalid username/password</b> : ""}
+                                                            </div>
+                                                        </div>
+                                                    </form>
                                                 </div>
                                             </div>
-                                            <div className="form-group">
-                                                <div className="col-xs-12">
-                                                    <input className={err ? "form-control input-lg error" : "form-control input-lg"} 
-                                                        type="password" placeholder="Password" required
-                                                        value={this.state.password} 
-                                                        onChange={event => 
-                                                            this.setState({
-                                                                password: event.target.value,
-                                                                err: false
-                                                            })
-                                                        }
-                                                    />
-                                                </div>
-                                            </div>
-                                            <div className="form-group"> 
-                                                <div className="col-xs-12">
-                                                    <button type="submit" className="btn btn-info">
-                                                        {isLoading ? <i className="fa fa-spinner fa-spin" style={{marginRight: "2px"}}></i> : ""}
-                                                        LOGIN
-                                                    </button>
-                                                </div>
-                                                <div className="col-xs-12">
-                                                    { err ? <b>Invalid username/password</b> : ""}
-                                                </div>
-                                            </div>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
                 : "" }
 
                 <SweetAlert
@@ -173,7 +191,8 @@ export default class Login extends PureComponent {
                     }
 
                     .error {
-                        border-color: #d13127!important;
+                        border-color: #d13127 !important;
+                        color: #d13127 !important;
                     }
                 `}</style>
             </div>
