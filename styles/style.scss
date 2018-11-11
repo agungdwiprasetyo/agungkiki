@@ -2131,6 +2131,7 @@ footer ul li a.active {
       font-size: 50px;
     }
     &.features {
+      min-height: 849px;
       .section-heading {
         margin-bottom: 100px;
         h2 {
@@ -2175,7 +2176,6 @@ footer ul li a.active {
   }
 
   footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
   }
