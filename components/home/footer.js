@@ -17,7 +17,7 @@ export default class FooterComponent extends PureComponent {
                             <a href="https://www.linkedin.com/in/agung-dwi-prasetyo" target="_blank" title="See My Curriculum Vitae"><i className="fa fa-linkedin fa-fw fa-3x"></i></a>
                         </li>
                         <li>
-                            <a href="https://www.facebook.com/agungdwip22" target="_blank"><i className="fa fa-facebook fa-fw fa-3x"></i></a>
+                            <a href="https://www.instagram.com/agungdp22" target="_blank"><i className="fa fa-instagram fa-fw fa-3x"></i></a>
                         </li>
                     </ul>
                     <br />

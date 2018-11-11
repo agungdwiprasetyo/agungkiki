@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import Link from 'next/link';
 import SweetAlert from 'sweetalert2-react';
 import jsCookie from 'js-cookie';
 import Router from 'next/router';
@@ -82,7 +83,7 @@ export default class Login extends PureComponent {
         } = this.state;
 
         return (
-            <div className="auth-page">
+            <div>
                 { !this.state.pageLoad ? 
                 <section className="features">
                     <div className="container">
@@ -101,8 +102,8 @@ export default class Login extends PureComponent {
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="feature-item icon-left">
-                                                <i className="fa fa-sign-in fa-fw fa-3x text-primary"></i>
-                                                <h4>Login for manage data</h4>
+                                                <Link href={`/`} prefetch><a><i className="fa fa-home fa-fw fa-3x text-primary"></i></a></Link>
+                                                <h4>Back to home</h4>
                                             </div>
                                         </div>
                                         <div className="col-md-6">
