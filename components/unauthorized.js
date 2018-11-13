@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default class Unauthorized extends PureComponent {
     render() {
         return (
-            <div id="event" className="about w3-agile">
+            <div className="about w3-agile">
                 <div className="container">
                     <div className="contact-info">	
                         <div className="col-md-12 text-center">

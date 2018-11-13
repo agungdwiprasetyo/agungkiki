@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import Header from "../components/Header";
 import Unauthorized from "../components/unauthorized";
 import API from "../helper/helper";
+import Footer from "../components/home/footer";
 
 export default function withAuth(AuthComponent, pageTitle) {
     return class Authenticated extends Component {
@@ -32,18 +33,23 @@ export default function withAuth(AuthComponent, pageTitle) {
             return (
                 <main>
                     <Layout title={ pageTitle } showBack={ true } />
-                    { this.state.isLoad ? "" : 
-                        this.state.isAuth ? 
-                        (
-                            <div className="container">
-                                <Header />
-                                <AuthComponent {...this.props} /> 
-                            </div>
-                        ) : 
-                        (
-                            <Unauthorized /> 
-                        )
-                    }
+                    <div className="auth-panel">
+                        { this.state.isLoad ? "" : 
+                            this.state.isAuth ? 
+                            (
+                                <div className="container">
+                                    <Header />
+                                    <AuthComponent {...this.props} /> 
+                                </div>
+                            ) : 
+                            (   
+                                <div>
+                                    <Unauthorized />
+                                </div>
+                            )
+                        }
+                    </div>
+                    <Footer />
                 </main>
             )
         }

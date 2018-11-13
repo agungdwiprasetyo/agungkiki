@@ -2068,6 +2068,7 @@ body {
   }
 
 footer {
+  height: 115px;
   background-color: #222222;
   padding: 20px 0;
   color: rgba(255, 255, 255, 0.3);
@@ -2106,6 +2107,10 @@ footer ul li a.active {
   padding-left: 0;
 }
 
+.auth-panel {
+  min-height: calc(100vh - 115px);
+}
+
 // AUTH PAGE STYLE
 .auth-page {
 
@@ -2131,7 +2136,6 @@ footer ul li a.active {
       font-size: 50px;
     }
     &.features {
-      min-height: 87.4vh;
       .section-heading {
         margin-bottom: 100px;
         h2 {
@@ -2173,11 +2177,6 @@ footer ul li a.active {
         }
       }
     }
-  }
-
-  footer {
-    bottom: 0;
-    width: 100%;
   }
 
   @media (min-width: 768px) {

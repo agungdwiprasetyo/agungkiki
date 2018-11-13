@@ -9,10 +9,10 @@ export default class LoginPage extends PureComponent {
         return(
           <main>
                 <Layout title={ "Login" } showBack={ true } />
-                <div className="auth-page">
+                <div className="auth-page auth-panel">
                     <Login />
-                    <Footer />
                 </div>
+                <Footer />
           </main>
         );
     }
