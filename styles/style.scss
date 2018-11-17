@@ -1820,6 +1820,25 @@ body {
     .modal-body {
       padding: 0 1em 2.5em;
     }
+
+    .auth-panel {
+      min-height: calc(100vh - 80px) !important;
+    }
+    footer {
+      height: 80px !important;
+      margin: 0 !important;
+      padding: 13px 0 !important;
+      ul {
+        margin-bottom: 0 !important;
+      }
+      p {
+        font-size: 11px !important;
+        margin: 5px 0 0 0 !important;
+      }
+      ul li a {
+        font-size: 10px !important;
+      }
+    }
   }
   
   @media (max-width: 414px) {
@@ -2070,13 +2089,13 @@ body {
 footer {
   height: 115px;
   background-color: #222222;
-  padding: 20px 0;
+  padding: 25px 0;
   color: rgba(255, 255, 255, 0.3);
   text-align: center;
 }
 footer p {
   font-size: 12px;
-  margin: 0;
+  margin: 8px 0 0 0;
 }
 footer ul {
   margin-bottom: 0;

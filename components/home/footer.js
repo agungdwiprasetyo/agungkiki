@@ -20,7 +20,6 @@ export default class FooterComponent extends PureComponent {
                             <a href="https://www.instagram.com/agungdp22" target="_blank"><i className="fa fa-instagram fa-fw fa-3x"></i></a>
                         </li>
                     </ul>
-                    <br />
                     <p>© {(new Date()).getFullYear()} <a href="http://www.agungdwiprasetyo.com" target="_blank">Agung Dwi Prasetyo</a> | Software Engineer | #2019gantistatus</p>
                 </div>
             </footer>
