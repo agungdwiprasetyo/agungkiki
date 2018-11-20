@@ -61,11 +61,15 @@ export default class People extends PureComponent {
         } = this.state;
 
         return (
-            <div className="contact-info">
-                <div className="col-md-12">
-                    <div className="cnt-address text-center">
-                        <h5>People List</h5>
+            <div className="content-wrapper">
+                <div className="col-md-12 text-center">
+                    <div className="section-heading">
+                        <h3>People List</h3>
+                        <p className="text-muted"></p>
+                        <hr />
                     </div>
+                </div>
+                <div className="col-md-12">
                     <div className="peopleList">
                         { peoples.map( (people) => (
                             <div className="col-xs-12 peopleItem" key={ people.id }>

@@ -11,6 +11,7 @@ export default class MessageComponent extends PureComponent {
             name: "",
             message: "",
             waNumber: "",
+            relation: "",
             isAttend: null,
             showAttendAlert: false,
             isLoading: false,
@@ -70,6 +71,7 @@ export default class MessageComponent extends PureComponent {
             name: this.state.name,
             waNumber: this.state.waNumber,
             message: this.state.message,
+            relation: this.state.relation,
             isAttend: this.state.isAttend
         }
 
@@ -91,6 +93,7 @@ export default class MessageComponent extends PureComponent {
             name: "",
             message: "",
             waNumber: "",
+            relation: "",
             isAttend: null,
             showAttendAlert: false,
             isLoading: false,
@@ -112,7 +115,6 @@ export default class MessageComponent extends PureComponent {
         return (
             <div className="contact">
                 <div className="container">
-                    {/* <h3 className="agileits-title header-section">RSVP</h3>    */}
                     <div className="contact-info">
                         <div className="col-md-12 contact-grids contact-grids-w3right">
                             <div className="row">
@@ -174,12 +176,18 @@ export default class MessageComponent extends PureComponent {
                                                 name="Message" placeholder="Leave message to us" required rows="1"></textarea>
                                         </div>
                                         <div className="col-xs-12">
+                                            <input className="form-control input-lg"
+                                                value={this.state.name} 
+                                                onChange={event => this.setState({ name: event.target.value })}
+                                                type="text" placeholder="Name" required />
+                                        </div>
+                                        <div className="col-xs-12">
                                             <div className="row">
                                                 <div className="col-xs-6">
                                                     <input className="form-control input-lg"
-                                                        value={this.state.name} 
-                                                        onChange={event => this.setState({ name: event.target.value })}
-                                                        type="text" placeholder="Name" required />
+                                                        value={this.state.relation} 
+                                                        onChange={event => this.setState({ relation: event.target.value })}
+                                                        type="text" placeholder="Company / relation with the bride" />
                                                 </div>
                                                 <div className="col-xs-6">
                                                     <input className="form-control input-lg"

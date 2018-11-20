@@ -71,59 +71,68 @@ export default class Event extends PureComponent {
         return (
             <div>
                 {isLoad ? <div className="loader"></div> : ""}
-                <div className="row">
+                <div className="content-wrapper">
                     <div className="container-fluid">
-                        <form className="form-horizontal" onSubmit={this.submitForm}>
-                            <div className="form-group">
-                                <label className="control-label col-sm-2">
-                                    Date :
-                                </label>
-                                <div className="col-sm-10">
-                                    <input type="text" className="form-control"
-                                        defaultValue={date} 
-                                        onChange={event => this.setState({date: event.target.value})}
-                                    />
-                                </div>
+                        <div className="col-md-12 text-center">
+                            <div className="section-heading">
+                                <h2>Event</h2>
+                                <p className="text-muted"></p>
+                                <hr />
                             </div>
-                            <div className="form-group">
-                                <label className="control-label col-sm-2">
-                                    Ceremony : 
-                                </label>
-                                <div className="col-sm-10">
-                                    <input type="text" className="form-control"
-                                        defaultValue={ceremony} 
-                                        onChange={event => this.setState({ceremony: event.target.value})}
-                                    />
+                        </div>
+                        <div className="col-md-12">
+                            <form className="form-horizontal" onSubmit={this.submitForm}>
+                                <div className="form-group">
+                                    <label className="control-label col-sm-2">
+                                        Date :
+                                    </label>
+                                    <div className="col-sm-10">
+                                        <input type="text" className="form-control"
+                                            defaultValue={date} 
+                                            onChange={event => this.setState({date: event.target.value})}
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="form-group">
-                                <label className="control-label col-sm-2">
-                                    Reception : 
-                                </label>
-                                <div className="col-sm-10">
-                                    <input type="text" className="form-control"
-                                        defaultValue={reception} 
-                                        onChange={event => this.setState({reception: event.target.value})}
-                                    />
+                                <div className="form-group">
+                                    <label className="control-label col-sm-2">
+                                        Ceremony : 
+                                    </label>
+                                    <div className="col-sm-10">
+                                        <input type="text" className="form-control"
+                                            defaultValue={ceremony} 
+                                            onChange={event => this.setState({ceremony: event.target.value})}
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="form-group">
-                                <label className="control-label col-sm-2">
-                                    Address : 
-                                </label>
-                                <div className="col-sm-10">
-                                    <input type="text" className="form-control"
-                                        defaultValue={address} 
-                                        onChange={event => this.setState({address: event.target.value})}
-                                    />
+                                <div className="form-group">
+                                    <label className="control-label col-sm-2">
+                                        Reception : 
+                                    </label>
+                                    <div className="col-sm-10">
+                                        <input type="text" className="form-control"
+                                            defaultValue={reception} 
+                                            onChange={event => this.setState({reception: event.target.value})}
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="form-group"> 
-                                <div className="text-center col-sm-12">
-                                    <button type="submit" className="btn btn-info">Save</button>
+                                <div className="form-group">
+                                    <label className="control-label col-sm-2">
+                                        Address : 
+                                    </label>
+                                    <div className="col-sm-10">
+                                        <input type="text" className="form-control"
+                                            defaultValue={address} 
+                                            onChange={event => this.setState({address: event.target.value})}
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                                <div className="form-group"> 
+                                    <div className="text-center col-sm-12">
+                                        <button type="submit" className="btn btn-info">Save</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
 
