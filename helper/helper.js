@@ -1,5 +1,4 @@
 import "isomorphic-fetch";
-import jsCookie from 'js-cookie';
 
 const apiUrl = "http://api.agungdwiprasetyo.com/wedding";
 
@@ -9,9 +8,14 @@ export default class API {
             'content-type': 'application/json'
         };
         
-        if (!token) {
-            token = jsCookie.get("token");
+        try {
+            if (!token) {
+                token = localStorage.getItem("token");
+            }
+        } catch {
+            // no action
         }
+
         headers["Authorization"] = `Bearer ${token}`
 
         this.headers = headers;

@@ -1,7 +1,6 @@
 import React, { PureComponent } from "react";
 import Link from 'next/link';
 import SweetAlert from 'sweetalert2-react';
-import jsCookie from 'js-cookie';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 
@@ -57,7 +56,7 @@ export default class Login extends PureComponent {
 
         this.api.POST("invitation/user/login", payload).then(response => {
             if (response.success) {
-                jsCookie.set('token', response.data.token);
+                localStorage.setItem("token", response.data.token);
                 this.setState({ 
                     showAlert: true,
                     user: response.data.user

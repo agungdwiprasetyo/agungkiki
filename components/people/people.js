@@ -74,12 +74,15 @@ export default class People extends PureComponent {
                         { peoples.map( (people) => (
                             <div className="col-xs-12 peopleItem" key={ people.id }>
                                 <div className="col-xs-10">
-                                    <h2>{ people.name }</h2>
+                                    <h3>{ people.name }</h3>
                                     <div className="peopleDetails">
-                                        <strong>{ people.waNumber }</strong>
+                                        Wa Number: <strong>{ people.waNumber }</strong>
                                     </div>
                                     <div className="peopleDetails">
-                                        <strong>{ people.message }</strong>
+                                        Relation: <strong>{ people.relation }</strong>
+                                    </div>
+                                    <div className="peopleDetails">
+                                        Message: <strong>{ people.message }</strong>
                                     </div>
                                     <div className="peopleDetails">
                                         { people.isAttend ? <strong>Presence</strong> : "Not presence" }
@@ -136,7 +139,6 @@ export default class People extends PureComponent {
                     }
                     .peopleDetails {
                         font-size: 0.9em;
-                        font-weight: bold;
                     }
                     .peopleDetails strong {
                         margin-right: 1em;

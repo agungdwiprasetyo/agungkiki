@@ -127,87 +127,103 @@ export default class MessageComponent extends PureComponent {
                                 </div>
                             </div>
                             
-                            <div className="contact-form">  
-                                <form onSubmit={this.submitForm}>
-                                    <div className="row">
-                                        <div className="col-xs-12">
-                                            <div className="row">
-                                                <div className="col-xs-6">
-                                                    <div
-                                                        className={"attending-option text-center " + (isAttend === true ? " active" : "") +
-                                                         ((this.state.showAttendAlert == true) && (this.state.isAttend == null) ? " warning" : "")
-                                                        }
-                                                        onClick={() => this.setState({ isAttend: true })}
-                                                    >
-                                                        YES
-                                                    </div>
-                                                </div>
-                                                <div className="col-xs-6" >
-                                                    <div
-                                                        className={"attending-option text-center " + (isAttend === false ? " active" : "") +
-                                                         ((this.state.showAttendAlert == true) && (this.state.isAttend == null) ? " warning" : "")
-                                                        }
-                                                        onClick={() => this.setState({ isAttend: false })}
-                                                    >
-                                                        NO
-                                                    </div>
+                            <div className="contact-form">
+                                <div className="row">
+                                    <div className="col-xs-12" style={{marginBottom: "30px"}}>
+                                        <div className="row">
+                                            <div className="col-xs-6">
+                                                <div
+                                                    className={"attending-option text-center " + (isAttend === true ? " active" : "") +
+                                                        ((this.state.showAttendAlert == true) && (this.state.isAttend == null) ? " warning" : "")
+                                                    }
+                                                    onClick={() => this.setState({ isAttend: true })}
+                                                >
+                                                    YES
                                                 </div>
                                             </div>
-                                            <div className="text-center">
-                                                {isAttend != null &&
-                                                    <div className="input-tips">
-                                                        {isAttend ?
-                                                            <span><b>Great!</b> See you there.</span> :
-                                                            <span>Hopefully we can meet you there.</span>
-                                                        }
-                                                    </div>
-                                                }
-                                                { (this.state.showAttendAlert == true) && (this.state.isAttend == null) ?
-                                                    <div className="text-not-confirm">
-                                                        Kindly confirm your presence (<b>yes/no</b>)
-                                                    </div> : ""
-                                                }
-                                            </div>
-                                        </div>
-                                        <div className="col-xs-12">
-                                            <textarea className="form-control"
-                                                value={this.state.message} 
-                                                onChange={event => this.setState({ message: event.target.value })}
-                                                name="Message" placeholder="Leave message to us" required rows="1"></textarea>
-                                        </div>
-                                        <div className="col-xs-12">
-                                            <input className="form-control input-lg"
-                                                value={this.state.name} 
-                                                onChange={event => this.setState({ name: event.target.value })}
-                                                type="text" placeholder="Name" required />
-                                        </div>
-                                        <div className="col-xs-12">
-                                            <div className="row">
-                                                <div className="col-xs-6">
-                                                    <input className="form-control input-lg"
-                                                        value={this.state.relation} 
-                                                        onChange={event => this.setState({ relation: event.target.value })}
-                                                        type="text" placeholder="Company / relation with the bride" />
-                                                </div>
-                                                <div className="col-xs-6">
-                                                    <input className="form-control input-lg"
-                                                        value={this.state.waNumber} 
-                                                        onChange={event => this.setState({ waNumber: event.target.value })}
-                                                        type="text" pattern="[0-9]+" placeholder="WhatsApp/Phone number (e.g 0812xxxx)" required maxLength="15"/> 
-                                                        {err != null ? <span><br /><b>{err}</b></span> : ""}
+                                            <div className="col-xs-6" >
+                                                <div
+                                                    className={"attending-option text-center " + (isAttend === false ? " active" : "") +
+                                                        ((this.state.showAttendAlert == true) && (this.state.isAttend == null) ? " warning" : "")
+                                                    }
+                                                    onClick={() => this.setState({ isAttend: false })}
+                                                >
+                                                    NO
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-xs-12 text-center">
-                                            <button
-                                                disabled={isLoading ? "disabled": ""} 
-                                                type="submit" >
-                                                {isLoading ? <i className="fa fa-spinner fa-spin" style={{marginRight: "2px"}}></i> : ""}
-                                                SUBMIT
-                                            </button>
+                                        <div className="text-center">
+                                            {isAttend != null &&
+                                                <div className="input-tips">
+                                                    {isAttend ?
+                                                        <span><b>Great!</b> See you there.</span> :
+                                                        <span>Hopefully we can meet you there.</span>
+                                                    }
+                                                </div>
+                                            }
+                                            { (this.state.showAttendAlert == true) && (this.state.isAttend == null) ?
+                                                <div className="text-not-confirm">
+                                                    Kindly confirm your presence (<b>yes/no</b>)
+                                                </div> : ""
+                                            }
                                         </div>
                                     </div>
-                                </form> 
+                                    <div className="col-xs-12">
+                                        <form onSubmit={this.submitForm}>
+                                            <div className="row">
+                                                <div className="col-xs-12">
+                                                    <div className="form-group">
+                                                        <b className="form-title">Leave message to us:</b>
+                                                        <textarea className="form-control"
+                                                            value={this.state.message} 
+                                                            onChange={event => this.setState({ message: event.target.value })}
+                                                            name="Message" placeholder="Your message for the bride" required rows="1"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div className="col-xs-12">
+                                                    <div className="form-group">
+                                                        <b className="form-title">Name:</b>
+                                                        <input className="form-control input-lg"
+                                                            value={this.state.name} 
+                                                            onChange={event => this.setState({ name: event.target.value })}
+                                                            type="text" placeholder="Your name" required />
+                                                    </div>
+                                                </div>
+                                                <div className="col-xs-12">
+                                                    <div className="row">
+                                                        <div className="col-xs-6">
+                                                            <div className="form-group">
+                                                                <b className="form-title">Relation with the bride:</b>
+                                                                <input className="form-control input-lg"
+                                                                    value={this.state.relation} 
+                                                                    onChange={event => this.setState({ relation: event.target.value })}
+                                                                    type="text" placeholder="(e.g Teman kuliah)" />
+                                                                </div>
+                                                        </div>
+                                                        <div className="col-xs-6">
+                                                            <div className="form-group">
+                                                                <b className="form-title">WhatsApp number:</b>
+                                                                <input className="form-control input-lg"
+                                                                    value={this.state.waNumber} 
+                                                                    onChange={event => this.setState({ waNumber: event.target.value })}
+                                                                    type="text" pattern="[0-9]+" placeholder="(e.g 0812xxxx)" required maxLength="15"/> 
+                                                                    {err != null ? <span><br /><b>{err}</b></span> : ""}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="col-xs-12 text-center">
+                                                    <button
+                                                        disabled={isLoading ? "disabled": ""} 
+                                                        type="submit" >
+                                                        {isLoading ? <i className="fa fa-spinner fa-spin" style={{marginRight: "2px"}}></i> : ""}
+                                                        SUBMIT
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div> 
                         <div className="clearfix"> </div>
@@ -227,6 +243,14 @@ export default class MessageComponent extends PureComponent {
                         </div>
                     </div>
                 </div>
+
+                <style jsx>{
+                    `
+                        .form-title {
+                            font-family: 'KoHo', sans-serif !important;
+                        }
+                    `
+                }</style>
             </div> 
         );
     }

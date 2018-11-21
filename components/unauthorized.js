@@ -2,6 +2,12 @@ import React, { PureComponent } from "react";
 import Link from 'next/link';
 
 export default class Unauthorized extends PureComponent {
+    constructor(props) {
+        super(props);
+
+        localStorage.clear()
+    }
+    
     render() {
         return (
             <div className="about w3-agile">
