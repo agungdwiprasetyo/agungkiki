@@ -156,8 +156,8 @@ export default class MessageComponent extends PureComponent {
                                             {isAttend != null &&
                                                 <div className="input-tips">
                                                     {isAttend ?
-                                                        <span><b>Great!</b> See you there.</span> :
-                                                        <span>Hopefully we can meet you there.</span>
+                                                        <span><b>Thanks!</b> See you later.</span> :
+                                                        <span>Hopefully your prayer be with us.</span>
                                                     }
                                                 </div>
                                             }
@@ -177,7 +177,7 @@ export default class MessageComponent extends PureComponent {
                                                         <textarea className="form-control"
                                                             value={this.state.message} 
                                                             onChange={event => this.setState({ message: event.target.value })}
-                                                            name="Message" placeholder="Your message for the bride" required rows="1"></textarea>
+                                                            name="Message" placeholder="Your message for us" required rows="1"></textarea>
                                                     </div>
                                                 </div>
                                                 <div className="col-xs-12">
@@ -193,7 +193,7 @@ export default class MessageComponent extends PureComponent {
                                                     <div className="row">
                                                         <div className="col-xs-6">
                                                             <div className="form-group">
-                                                                <b className="form-title">Relation with the bride:</b>
+                                                                <b className="form-title">Relation with bridegroom:</b>
                                                                 <input className="form-control input-lg"
                                                                     value={this.state.relation} 
                                                                     onChange={event => this.setState({ relation: event.target.value })}
