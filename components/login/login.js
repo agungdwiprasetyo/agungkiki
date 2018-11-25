@@ -17,7 +17,8 @@ export default class Login extends PureComponent {
             showAlert: false,
             err: false,
             user: {},
-            pageLoad: true
+            pageLoad: true,
+            splitScreen: true
         };
 
         this.api = new API();
@@ -37,6 +38,13 @@ export default class Login extends PureComponent {
         } else {
             this.setState({pageLoad: false});
         }
+
+        window.addEventListener("resize", this.resize.bind(this));
+        this.resize();
+    }
+
+    resize() {
+        this.setState({splitScreen: window.innerWidth > 991});
     }
 
     submitForm(event) {
@@ -99,12 +107,14 @@ export default class Login extends PureComponent {
                             <div className="">
                                 <div className="container-fluid">
                                     <div className="row">
-                                        <div className="col-md-6">
-                                            <div className="feature-item icon-left">
-                                                <Link href={`/`} prefetch><a><i className="fa fa-home fa-fw fa-3x text-primary"></i></a></Link>
-                                                <h4>Back to home</h4>
-                                            </div>
-                                        </div>
+                                        { this.state.splitScreen ?
+                                            <div className="col-md-6">
+                                                <div className="feature-item icon-left">
+                                                    <Link href={`/`} prefetch><a><i className="fa fa-home fa-fw fa-3x text-primary"></i></a></Link>
+                                                    <h4>Back to home</h4>
+                                                </div>
+                                            </div> : ""
+                                        }
                                         <div className="col-md-6">
                                             <div className="feature-item">
                                                 <div className="container-fluid">

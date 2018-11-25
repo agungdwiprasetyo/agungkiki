@@ -18,7 +18,8 @@ export default class MessageComponent extends PureComponent {
             isLoadingNumber: true,
             totalPresent: 0,
             showAlert: false,
-            err: null
+            err: null,
+            mobileMode: false,
         };
 
         this.api = new API();
@@ -29,6 +30,15 @@ export default class MessageComponent extends PureComponent {
         this.closeAlert = this.closeAlert.bind(this);
 
         this.getTotalPresent();
+    }
+    
+    componentDidMount() {
+        window.addEventListener("resize", this.resize.bind(this));
+        this.resize();
+    }
+
+    resize() {
+        this.setState({mobileMode: window.innerWidth <= 400});
     }
 
     getTotalPresent() {
@@ -193,7 +203,7 @@ export default class MessageComponent extends PureComponent {
                                                     <div className="row">
                                                         <div className="col-xs-6">
                                                             <div className="form-group">
-                                                                <b className="form-title">Relation with bridegroom:</b>
+                                                                <b className="form-title">Relation {this.state.mobileMode ? "w/" : "with"} bridegroom:</b>
                                                                 <input className="form-control input-lg"
                                                                     value={this.state.relation} 
                                                                     onChange={event => this.setState({ relation: event.target.value })}
