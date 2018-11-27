@@ -7,14 +7,48 @@ export default class AboutComponent extends PureComponent {
 
         this.state = {
             loading: true,
-            event: {}
+            event: {},
+            time: {},
+            seconds: 0
         };
 
         this.api = new API();
 
         this.getEvents = this.getEvents.bind(this);
+        this.timer = 0;
+        this.countDown = this.countDown.bind(this);
 
         this.getEvents();
+    }
+
+    componentDidMount() {
+        this.setState({ time: {d: 0, h: 0, m: 0, s: 0} });
+    }
+
+    countDown() {
+        let seconds = this.state.seconds - 1;
+
+        let days        = Math.floor(seconds/24/60/60);
+        let hoursLeft   = Math.floor((seconds) - (days*86400));
+        let hours       = Math.floor(hoursLeft/3600);
+        let minutesLeft = Math.floor((hoursLeft) - (hours*3600));
+        let minutes     = Math.floor(minutesLeft/60);
+        let remainingSeconds = Math.floor(seconds % 60);
+    
+        this.setState({
+            time: {
+                "d": days,
+                "h": hours,
+                "m": minutes,
+                "s": remainingSeconds
+            },
+            seconds: seconds
+        });
+        
+        if (Math.floor(seconds) < 0) { 
+            seconds = 0;
+            clearInterval(this.timer);
+        }
     }
     
     getEvents() {
@@ -23,7 +57,16 @@ export default class AboutComponent extends PureComponent {
         });
         this.api.GET("invitation/event").then(response => {
             this.setState({loading: false});
-            this.setState({event: response.data});
+            let date = "2018-12-30T08:00:00+07:00";
+            let date1 = new Date();
+            let date2 = new Date(date);
+            let timeDiff = date2.getTime() - date1.getTime();
+            if (timeDiff < 0) timeDiff = 0;
+            let diffHours = (timeDiff / 1000);
+
+            // response.data.date = date2.toDateString();
+            this.setState({event: response.data, seconds: diffHours});
+            this.timer = setInterval(this.countDown, 1000);
         }).catch(err => {
             console.log(err);
             this.setState({
@@ -62,7 +105,6 @@ export default class AboutComponent extends PureComponent {
                     </div>
                 </div>
 
-
                 <div className="container">
                     <div className="contact-info">	
                         <div className="col-md-12 text-center">
@@ -70,6 +112,7 @@ export default class AboutComponent extends PureComponent {
                                 <h5 className="akad"> { loading ? <div className="animated-background date-loading"></div> : event.date } </h5> 
                                 <div className="akad"> 
                                     { loading ? <div className="animated-background ceremony-loading"></div> : <Event name="Ceremony" data={event.ceremony} /> }
+                                    {this.state.time.d}d {this.state.time.h}h {this.state.time.m}m {this.state.time.s}s 
                                 </div>
                                 <div className="akad"> 
                                     { loading ? <div className="animated-background reception-loading"></div> : <Event name="Reception" data={event.reception} /> }
