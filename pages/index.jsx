@@ -35,7 +35,7 @@ class App extends Component {
             <main>
                 <Layout 
                     title={'Agung & Kiki Wedding'} 
-                    description={'A PWA built with React and Next.js for my wedding'}>
+                    description={'AgungKiki Wedding Official Website'}>
                 </Layout>
                 <Home />
                 <About />
