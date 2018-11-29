@@ -112,7 +112,7 @@ export default class AboutComponent extends PureComponent {
                                 <h5 className="akad"> { loading ? <div className="animated-background date-loading"></div> : event.date } </h5> 
                                 <div className="akad"> 
                                     { loading ? <div className="animated-background ceremony-loading"></div> : <Event name="Ceremony" data={event.ceremony} /> }
-                                    {this.state.time.d}d {this.state.time.h}h {this.state.time.m}m {this.state.time.s}s 
+                                    {/* {this.state.time.d}d {this.state.time.h}h {this.state.time.m}m {this.state.time.s}s  */}
                                 </div>
                                 <div className="akad"> 
                                     { loading ? <div className="animated-background reception-loading"></div> : <Event name="Reception" data={event.reception} /> }
