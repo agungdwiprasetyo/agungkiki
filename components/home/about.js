@@ -26,6 +26,8 @@ export default class AboutComponent extends PureComponent {
     }
 
     countDown() {
+        if (this.state.seconds <= 0) return;
+        
         let seconds = this.state.seconds - 1;
 
         let days        = Math.floor(seconds/24/60/60);
@@ -55,17 +57,11 @@ export default class AboutComponent extends PureComponent {
         this.setState({
             loading: true
         });
-        this.api.GET("invitation/event").then(response => {
-            this.setState({loading: false});
-            let date = "2018-12-30T08:00:00+07:00";
-            let date1 = new Date();
-            let date2 = new Date(date);
-            let timeDiff = date2.getTime() - date1.getTime();
-            if (timeDiff < 0) timeDiff = 0;
-            let diffHours = (timeDiff / 1000);
+        this.api.GraphQL(`{get_event{date,ceremony,reception,address,countDown}}`).then(response => {
+            let respData = response.data.get_event;
 
-            // response.data.date = date2.toDateString();
-            this.setState({event: response.data, seconds: diffHours});
+            this.setState({loading: false});
+            this.setState({event: respData, seconds: respData.countDown});
             this.timer = setInterval(this.countDown, 1000);
         }).catch(err => {
             console.log(err);

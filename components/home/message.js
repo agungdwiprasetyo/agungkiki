@@ -43,7 +43,7 @@ export default class MessageComponent extends PureComponent {
 
     getTotalPresent() {
         this.setState({ isLoadingNumber: true });
-        this.api.GET("invitation/root?query={get_count(is_attend:true)}").then(response => {
+        this.api.GraphQL(`{get_count(is_attend:true)}`).then(response => {
             this.setState({ totalPresent: response.data.get_count });
             this.setState({ isLoadingNumber: false });
         }).catch(err => {

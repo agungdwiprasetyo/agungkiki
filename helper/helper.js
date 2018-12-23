@@ -31,6 +31,20 @@ export default class API {
         });
     }
 
+    GraphQL(query) {
+        return fetch(`${apiUrl}/invitation/graphql`, {
+            method: 'POST',
+            headers: this.headers,
+            body: query
+          })
+          .then( r => {
+              return r.json();
+          })
+          .catch(err => {
+            console.error('fetch error: ', err)
+          });
+    };
+
     GET(urlPath) {
         return fetch(`${apiUrl}/${urlPath}`, {
                 method: 'GET',
